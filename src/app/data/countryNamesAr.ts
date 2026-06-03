@@ -1,0 +1,56 @@
+/** Arabic display names for country dial list (fallback to English `name` when missing). */
+export const COUNTRY_NAMES_AR: Record<string, string> = {
+  JO: "الأردن",
+  SA: "المملكة العربية السعودية",
+  AE: "الإمارات العربية المتحدة",
+  EG: "مصر",
+  KW: "الكويت",
+  QA: "قطر",
+  BH: "البحرين",
+  OM: "عُمان",
+  LB: "لبنان",
+  IQ: "العراق",
+  PS: "فلسطين",
+  SY: "سوريا",
+  YE: "اليمن",
+  MA: "المغرب",
+  DZ: "الجزائر",
+  TN: "تونس",
+  LY: "ليبيا",
+  SD: "السودان",
+  TR: "تركيا",
+  US: "الولايات المتحدة",
+  CA: "كندا",
+  GB: "المملكة المتحدة",
+  DE: "ألمانيا",
+  FR: "فرنسا",
+  IT: "إيطاليا",
+  ES: "إسبانيا",
+  NL: "هولندا",
+  BE: "بلجيكا",
+  CH: "سويسرا",
+  SE: "السويد",
+  NO: "النرويج",
+  DK: "الدنمارك",
+  FI: "فنلندا",
+  PL: "بولندا",
+  IN: "الهند",
+  PK: "باكستان",
+  BD: "بنغلاديش",
+  PH: "الفلبين",
+  ID: "إندونيسيا",
+  MY: "ماليزيا",
+  SG: "سنغافورة",
+  AU: "أستراليا",
+  NZ: "نيوزيلندا",
+  ZA: "جنوب أفريقيا",
+  NG: "نيجيريا",
+  KE: "كينيا",
+};
+
+export function countryNameForLocale(iso2: string, englishName: string, language: "EN" | "AR"): string {
+  if (language === "AR") {
+    return COUNTRY_NAMES_AR[iso2.toUpperCase()] ?? englishName;
+  }
+  return englishName;
+}
