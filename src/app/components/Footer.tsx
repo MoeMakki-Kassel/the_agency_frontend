@@ -180,15 +180,6 @@ export function Footer() {
           >
             Kasselsoft
           </a>{" "}
-          {t("footer.poweredByAnd")}{" "}
-          <a
-            href="https://www.kastana.net"
-            target="_blank"
-            rel="noreferrer"
-            className="underline hover:text-primary transition-colors"
-          >
-            Kastana
-          </a>
         </p>
       </div>
     </footer>
