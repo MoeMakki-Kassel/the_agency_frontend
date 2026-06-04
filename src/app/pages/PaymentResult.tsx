@@ -19,7 +19,7 @@ export default function PaymentResult() {
   if (status === "loading") {
     return (
       <div className="bg-background min-h-screen flex items-center justify-center font-['Inter']">
-        <p className="text-[#8c8c8c]">Processing your payment…</p>
+        <p className="text-muted-foreground">Processing your payment…</p>
       </div>
     );
   }
@@ -45,7 +45,7 @@ export default function PaymentResult() {
         </h1>
 
         {/* Sub-message */}
-        <p className="text-[#8c8c8c]">
+        <p className="text-muted-foreground">
           {isPaid
             ? "Your tickets have been confirmed. Check your email for details."
             : "Your payment could not be processed. Please try again."}
@@ -54,20 +54,20 @@ export default function PaymentResult() {
         {/* QR / reference card */}
         {isPaid && reservationId && (
           <div className="bg-card text-card-foreground p-6 rounded-2xl max-w-sm mx-auto my-8 border border-border">
-            {/* <div className="w-48 h-48 bg-white mx-auto flex items-center justify-center p-2 mb-4 border border-[#e8e8e8] rounded-lg">
+            {/* <div className="w-48 h-48 bg-white mx-auto flex items-center justify-center p-2 mb-4 border border-border rounded-lg">
               <img
                 src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(reservationId)}`}
                 alt="Booking QR Code"
                 className="w-full h-full"
               />
             </div> */}
-            <p className="text-sm text-[#8c8c8c]">Booking reference</p>
+            <p className="text-sm text-muted-foreground">Booking reference</p>
             <p className="font-mono font-bold text-foreground mt-1">{reservationId}</p>
           </div>
         )}
 
         {!isPaid && reservationId && (
-          <p className="text-sm text-[#8c8c8c] font-mono">
+          <p className="text-sm text-muted-foreground font-mono">
             Reference: {reservationId}
           </p>
         )}

@@ -145,7 +145,7 @@ export function Contact() {
                   <Phone className="w-6 h-6 text-foreground" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground mb-2">{t("contact.call.title")}</h3>
-                <p className="text-sm text-[#8c8c8c] mb-3">{t("contact.call.hours")}</p>
+                <p className="text-sm text-muted-foreground mb-3">{t("contact.call.hours")}</p>
                 <a href={`tel:${contactPhone1}`} className="text-foreground font-medium hover:underline block">
                   {settings?.contact_phone_label_1
                     ? formatLabeledPhone(settings.contact_phone_label_1, contactPhone1)
@@ -163,7 +163,7 @@ export function Contact() {
                   <Mail className="w-6 h-6 text-foreground" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground mb-2">{t("contact.email.title")}</h3>
-                <p className="text-sm text-[#8c8c8c] mb-3">{t("contact.email.response")}</p>
+                <p className="text-sm text-muted-foreground mb-3">{t("contact.email.response")}</p>
                 <a href={`mailto:${contactEmail}`} className="text-foreground font-medium hover:underline block">
                   <BidiLtr className="break-all">{contactEmail}</BidiLtr>
                 </a>
@@ -174,7 +174,7 @@ export function Contact() {
                   <MessageCircle className="w-6 h-6 text-foreground" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground mb-2">{t("contact.whatsapp.title")}</h3>
-                <p className="text-sm text-[#8c8c8c] mb-3">{t("contact.whatsapp.desc")}</p>
+                <p className="text-sm text-muted-foreground mb-3">{t("contact.whatsapp.desc")}</p>
                 {whatsappEnabled && whatsappHref ? (
                   <a href={whatsappHref} target="_blank" rel="noreferrer" className="text-foreground font-medium hover:underline">
                     {t("contact.whatsapp.cta")}
@@ -188,7 +188,7 @@ export function Contact() {
                     <MapPin className="w-6 h-6 text-foreground" />
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2">{t("contact.visit.title")}</h3>
-                  <p className="text-sm text-[#8c8c8c] whitespace-pre-line">{visitAddress}</p>
+                  <p className="text-sm text-muted-foreground whitespace-pre-line">{visitAddress}</p>
                 </div>
               ) : null}
             </div>
@@ -197,7 +197,7 @@ export function Contact() {
             <div className="lg:col-span-2">
               <div className="bg-card text-card-foreground p-8 rounded-xl border border-border shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
                 <h2 className="text-3xl font-bold font-['Tajawal'] text-foreground mb-2">{t("contact.form.title")}</h2>
-                <p className="text-[#8c8c8c] mb-8">{t("contact.form.desc")}</p>
+                <p className="text-muted-foreground mb-8">{t("contact.form.desc")}</p>
 
                 {submitted ? (
                   <div className="bg-[#525252]/10 border border-[#525252]/20 rounded-lg p-6 text-center">
@@ -205,7 +205,7 @@ export function Contact() {
                       <Send className="w-8 h-8 text-[#525252]" />
                     </div>
                     <h3 className="text-xl font-bold text-foreground mb-2">{t("contact.form.success")}</h3>
-                    <p className="text-[#8c8c8c]">{t("contact.form.successDesc")}</p>
+                    <p className="text-muted-foreground">{t("contact.form.successDesc")}</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -221,7 +221,7 @@ export function Contact() {
                           {...formFieldDirProps(
                             isRTL,
                             "text",
-                            "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground",
+                            "w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground",
                           )}
                         />
                       </div>
@@ -236,7 +236,7 @@ export function Contact() {
                           {...formFieldDirProps(
                             isRTL,
                             "latin",
-                            "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground",
+                            "w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground",
                           )}
                         />
                       </div>
@@ -269,7 +269,7 @@ export function Contact() {
                           {...formFieldDirProps(
                             isRTL,
                             "text",
-                            "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground",
+                            "w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground",
                           )}
                         >
                           <option value="">{t("contact.form.selectSubject")}</option>
@@ -294,7 +294,7 @@ export function Contact() {
                         {...formFieldDirProps(
                           isRTL,
                           "text",
-                          "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground resize-none",
+                          "w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground resize-none",
                         )}
                       ></textarea>
                     </div>
@@ -319,7 +319,7 @@ export function Contact() {
       <section className="py-24 bg-background">
         <div className="max-w-[1200px] mx-auto px-6">
           <h2 className="text-4xl font-bold font-['Tajawal'] text-foreground text-center mb-4">{t("contact.faq.title")}</h2>
-          <p className="text-center text-[#8c8c8c] mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
             {t("contact.faq.desc")}
           </p>
 
@@ -330,7 +330,7 @@ export function Contact() {
                   {t(`contact.faq.q${n}`)}
                   <span className="text-foreground group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <p className="text-[#8c8c8c] mt-4">
+                <p className="text-muted-foreground mt-4">
                   {t(`contact.faq.a${n}`)}
                 </p>
               </details>

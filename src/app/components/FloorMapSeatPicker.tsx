@@ -426,7 +426,7 @@ export function FloorMapSeatPicker({
 
   if (showLoadingOverlay) {
     return (
-      <div className="flex items-center justify-center py-24 text-[#8c8c8c] text-sm font-medium">
+      <div className="flex items-center justify-center py-24 text-muted-foreground text-sm font-medium">
         Loading seats...
       </div>
     );
@@ -439,19 +439,19 @@ export function FloorMapSeatPicker({
   return (
     <div className="flex flex-col min-h-0 flex-1 gap-0">
       <div
-        className={`sticky top-0 z-20 shrink-0 px-4 sm:px-0 bg-white/95 backdrop-blur-sm border-b border-[#e8e8e8] ${
+        className={`sticky top-0 z-20 shrink-0 px-4 sm:px-0 bg-white/95 backdrop-blur-sm border-b border-border ${
           compactSummary
             ? 'pt-2 pb-1.5 sm:pt-3 sm:pb-2 scaled-laptop:pt-1.5 scaled-laptop:pb-1 cramped:pt-1.5 cramped:pb-1'
             : 'pt-3 pb-2'
         }`}
       >
         {!compactSummary && (
-          <p className="text-[10px] uppercase tracking-wide text-[#8c8c8c] font-semibold mb-1">
+          <p className="text-[10px] uppercase tracking-wide text-muted-foreground font-semibold mb-1">
             {t('booking.selection.summary')}
           </p>
         )}
         <div
-          className={`flex items-center justify-between gap-3 bg-[#e8e8e8] rounded-xl ${
+          className={`flex items-center justify-between gap-3 bg-muted rounded-xl ${
             compactSummary ? 'p-2 sm:p-3' : 'p-3'
           }`}
         >
@@ -460,7 +460,7 @@ export function FloorMapSeatPicker({
               {totalSelected} {ticketCountLabel}
             </span>
             {totalSelected === 0 && !compactSummary ? (
-              <span className="text-xs text-[#8c8c8c] mt-0.5 block truncate">
+              <span className="text-xs text-muted-foreground mt-0.5 block truncate">
                 {t('booking.selection.empty')}
               </span>
             ) : totalSelected > 0 ? (
@@ -559,7 +559,7 @@ export function FloorMapSeatPicker({
           </div>
           {mapTiers.length > 1 && preferCompactSeatUx && (
             <div
-              className="shrink-0 border-t border-[#e8e8e8] bg-white/95 backdrop-blur-md z-20"
+              className="shrink-0 border-t border-border bg-white/95 backdrop-blur-md z-20"
               role="group"
               aria-label={t('seats.filterByTier')}
             >
@@ -596,11 +596,11 @@ export function FloorMapSeatPicker({
           <details className="shrink-0 mx-4 sm:mx-0 border border-border rounded-xl bg-card text-card-foreground group">
             <summary className="cursor-pointer list-none px-3 py-2.5 text-sm font-medium touch-manipulation [&::-webkit-details-marker]:hidden">
               {t('tier.regularStanding')}
-              <span className="float-end text-[#8c8c8c] text-xs font-normal group-open:hidden">
+              <span className="float-end text-muted-foreground text-xs font-normal group-open:hidden">
                 Tap to expand
               </span>
             </summary>
-            <div className="space-y-2 px-3 pb-3 pt-0 border-t border-[#e8e8e8]">
+            <div className="space-y-2 px-3 pb-3 pt-0 border-t border-border">
               {gaTiers.map((gt) => (
                 <div key={gt.id} className="flex items-center justify-between gap-3">
                   <span className="text-sm truncate">
@@ -610,7 +610,7 @@ export function FloorMapSeatPicker({
                     <button
                       type="button"
                       aria-label={`Decrease ${tierLabel(gt)}`}
-                      className="w-9 h-9 rounded-lg border border-[#e8e8e8] text-lg touch-manipulation active:bg-[#e8e8e8]"
+                      className="w-9 h-9 rounded-lg border border-border text-lg touch-manipulation active:bg-muted"
                       onClick={() => setGaQty(gt.id, (gaQuantities[gt.id] ?? 0) - 1)}
                     >
                       −
@@ -621,7 +621,7 @@ export function FloorMapSeatPicker({
                     <button
                       type="button"
                       aria-label={`Increase ${tierLabel(gt)}`}
-                      className="w-9 h-9 rounded-lg border border-[#e8e8e8] text-lg touch-manipulation active:bg-[#e8e8e8]"
+                      className="w-9 h-9 rounded-lg border border-border text-lg touch-manipulation active:bg-muted"
                       onClick={() => setGaQty(gt.id, (gaQuantities[gt.id] ?? 0) + 1)}
                     >
                       +
@@ -643,7 +643,7 @@ export function FloorMapSeatPicker({
                   <button
                     type="button"
                     aria-label={`Decrease ${tierLabel(gt)}`}
-                    className="w-11 h-11 sm:w-9 sm:h-9 rounded-lg border border-[#e8e8e8] text-lg touch-manipulation active:bg-[#e8e8e8]"
+                    className="w-11 h-11 sm:w-9 sm:h-9 rounded-lg border border-border text-lg touch-manipulation active:bg-muted"
                     onClick={() => setGaQty(gt.id, (gaQuantities[gt.id] ?? 0) - 1)}
                   >
                     −
@@ -652,7 +652,7 @@ export function FloorMapSeatPicker({
                   <button
                     type="button"
                     aria-label={`Increase ${tierLabel(gt)}`}
-                    className="w-11 h-11 sm:w-9 sm:h-9 rounded-lg border border-[#e8e8e8] text-lg touch-manipulation active:bg-[#e8e8e8]"
+                    className="w-11 h-11 sm:w-9 sm:h-9 rounded-lg border border-border text-lg touch-manipulation active:bg-muted"
                     onClick={() => setGaQty(gt.id, (gaQuantities[gt.id] ?? 0) + 1)}
                   >
                     +
@@ -663,7 +663,7 @@ export function FloorMapSeatPicker({
           </div>
         ))}
 
-      <div className="sticky bottom-0 z-20 shrink-0 px-4 sm:px-0 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-gradient-to-t from-white via-white to-white/90 border-t border-[#e8e8e8]">
+      <div className="sticky bottom-0 z-20 shrink-0 px-4 sm:px-0 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-gradient-to-t from-white via-white to-white/90 border-t border-border">
         <button
           type="button"
           onClick={handleConfirm}

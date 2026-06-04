@@ -234,7 +234,7 @@ export function Profile() {
 
   return (
     <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-[#8c8c8c] hover:text-foreground transition-colors mb-6">
+      <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6">
         <ArrowLeft size={18} /><span className="text-sm font-medium">{t("common.back")}</span>
       </button>
       <h1 className="text-3xl font-bold text-foreground mb-6">{t("profile.title")}</h1>
@@ -261,7 +261,7 @@ export function Profile() {
                   isRTL,
                   "text",
                   `w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/40 ${
-                    fieldErrors.first_name ? "border-red-500" : "border-[#e8e8e8]"
+                    fieldErrors.first_name ? "border-red-500" : "border-border"
                   }`,
                 )}
               />
@@ -284,7 +284,7 @@ export function Profile() {
                   isRTL,
                   "text",
                   `w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/40 ${
-                    fieldErrors.last_name ? "border-red-500" : "border-[#e8e8e8]"
+                    fieldErrors.last_name ? "border-red-500" : "border-border"
                   }`,
                 )}
               />
@@ -348,7 +348,7 @@ export function Profile() {
                   isRTL,
                   "latin",
                   `w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/40 ${
-                    fieldErrors.age ? "border-red-500" : "border-[#e8e8e8]"
+                    fieldErrors.age ? "border-red-500" : "border-border"
                   }`,
                 )}
               />
@@ -373,7 +373,7 @@ export function Profile() {
           ) : (
             <div className="space-y-4">
               {reservations.map((reservation) => (
-                <article key={reservation.id} className="border border-[#e8e8e8] rounded-lg p-4">
+                <article key={reservation.id} className="border border-border rounded-lg p-4">
                   <div className="flex flex-wrap gap-2 items-center justify-between mb-2">
                     <h3 className="font-semibold text-foreground">{reservation.events?.title || t("profile.untitledEvent")}</h3>
                     <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground uppercase">

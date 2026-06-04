@@ -26,10 +26,10 @@ export function Terms() {
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.agreement.title')}</h2>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.agreement.p1')}
               </p>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t('terms.agreement.p2')}
               </p>
             </div>
@@ -38,12 +38,12 @@ export function Terms() {
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.use.title')}</h2>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.use.eligibility.title')}</h3>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.use.eligibility.desc')}
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.use.registration.title')}</h3>
-              <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2 mb-4">
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-4">
                 <li>{t('terms.use.registration.item1')}</li>
                 <li>{t('terms.use.registration.item2')}</li>
                 <li>{t('terms.use.registration.item3')}</li>
@@ -51,10 +51,10 @@ export function Terms() {
               </ul>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.use.prohibited.title')}</h3>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.use.prohibited.intro')}
               </p>
-              <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2">
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                 <li>{t('terms.use.prohibited.item1')}</li>
                 <li>{t('terms.use.prohibited.item2')}</li>
                 <li>{t('terms.use.prohibited.item3')}</li>
@@ -69,10 +69,10 @@ export function Terms() {
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.purchases.title')}</h2>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.purchases.process.title')}</h3>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.purchases.process.intro')}
               </p>
-              <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2 mb-4">
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-4">
                 <li>{t('terms.purchases.process.item1')}</li>
                 <li>{t('terms.purchases.process.item2')}</li>
                 <li>{t('terms.purchases.process.item3')}</li>
@@ -80,7 +80,7 @@ export function Terms() {
               </ul>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.purchases.pricing.title')}</h3>
-              <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2 mb-4">
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-4">
                 <li>{t('terms.purchases.pricing.item1')}</li>
                 <li>{t('terms.purchases.pricing.item2')}</li>
                 <li>{t('terms.purchases.pricing.item3')}</li>
@@ -89,7 +89,7 @@ export function Terms() {
               </ul>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.purchases.limits.title')}</h3>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t('terms.purchases.limits.desc')}
               </p>
             </div>
@@ -98,22 +98,22 @@ export function Terms() {
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.refunds.title')}</h2>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.refunds.cancellation.title')}</h3>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.refunds.cancellation.intro')}
               </p>
-              <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2 mb-4">
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-4">
                 <li>{t('terms.refunds.cancellation.item1')}</li>
                 <li>{t('terms.refunds.cancellation.item2')}</li>
                 <li>{t('terms.refunds.cancellation.item3')}</li>
               </ul>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.refunds.postponement.title')}</h3>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.refunds.postponement.desc')}
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.refunds.customer.title')}</h3>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t('terms.refunds.customer.desc')}
               </p>
             </div>
@@ -122,7 +122,7 @@ export function Terms() {
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.access.title')}</h2>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.access.entry.title')}</h3>
-              <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2 mb-4">
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-4">
                 <li>{t('terms.access.entry.item1')}</li>
                 <li>{t('terms.access.entry.item2')}</li>
                 <li>{t('terms.access.entry.item3')}</li>
@@ -130,32 +130,32 @@ export function Terms() {
               </ul>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.access.prohibited.title')}</h3>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.access.prohibited.desc')}
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.access.behavior.title')}</h3>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t('terms.access.behavior.desc')}
               </p>
             </div>
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.ip.title')}</h2>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.ip.p1')}
               </p>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t('terms.ip.p2')}
               </p>
             </div>
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.liability.title')}</h2>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.liability.intro')}
               </p>
-              <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2">
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                 <li>{t('terms.liability.item1')}</li>
                 <li>{t('terms.liability.item2')}</li>
                 <li>{t('terms.liability.item3')}</li>
@@ -166,14 +166,14 @@ export function Terms() {
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.indemnification.title')}</h2>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t('terms.indemnification.desc')}
               </p>
             </div>
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.privacy.title')}</h2>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t('terms.privacy.desc')}
               </p>
             </div>
@@ -182,15 +182,15 @@ export function Terms() {
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.disputes.title')}</h2>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.disputes.law.title')}</h3>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.disputes.law.desc')}
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.disputes.process.title')}</h3>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.disputes.process.intro')}
               </p>
-              <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2">
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                 <li>{t('terms.disputes.process.item1')}</li>
                 <li>{t('terms.disputes.process.item2')}</li>
                 <li>{t('terms.disputes.process.item3')}</li>
@@ -199,31 +199,31 @@ export function Terms() {
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.changes.title')}</h2>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t('terms.changes.desc')}
               </p>
             </div>
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.termination.title')}</h2>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t('terms.termination.desc')}
               </p>
             </div>
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.severability.title')}</h2>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t('terms.severability.desc')}
               </p>
             </div>
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.contact.title')}</h2>
-              <p className="text-[#8c8c8c] mb-4">
+              <p className="text-muted-foreground mb-4">
                 {t('terms.contact.intro')}
               </p>
-              <div className="bg-[#e8e8e8] p-6 rounded-lg">
+              <div className="bg-muted p-6 rounded-lg">
                 <p className="text-foreground mb-2"><strong>{t('terms.contact.email')}</strong> {t('terms.contact.emailValue')}</p>
                 <p className="text-foreground mb-2">
                   <strong>{t('terms.contact.phone')}</strong>{' '}
@@ -235,8 +235,8 @@ export function Terms() {
               </div>
             </div>
 
-            <div className="bg-[#e8e8e8] p-6 rounded-lg mt-12">
-              <p className="text-sm text-[#8c8c8c]">
+            <div className="bg-muted p-6 rounded-lg mt-12">
+              <p className="text-sm text-muted-foreground">
                 {t('terms.acknowledgment')}
               </p>
             </div>

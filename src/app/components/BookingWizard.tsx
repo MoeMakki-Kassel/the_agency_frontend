@@ -618,7 +618,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                   type="button"
                   onClick={() => void goBack()}
                   disabled={loading}
-                  className="p-2 hover:bg-[#e8e8e8] rounded-lg shrink-0 disabled:opacity-50"
+                  className="p-2 hover:bg-muted rounded-lg shrink-0 disabled:opacity-50"
                   aria-label={t('common.back')}
                 >
                   <ChevronLeft size={20} />
@@ -626,13 +626,13 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
               )}
               <div className="min-w-0">
               <h3 className="font-bold text-base sm:text-xl text-foreground truncate scaled-laptop:text-base cramped:text-sm">{event.title}</h3>
-              <p className="text-xs sm:text-sm text-[#8c8c8c] short:hidden">{t('booking.title')}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground short:hidden">{t('booking.title')}</p>
               </div>
             </div>
             <button
               type="button"
               onClick={handleClose}
-              className="p-2 hover:bg-[#e8e8e8] rounded-lg shrink-0"
+              className="p-2 hover:bg-muted rounded-lg shrink-0"
               aria-label="Close"
             >
               <X size={20} />
@@ -643,7 +643,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
             {steps.map((s, i) => (
               <React.Fragment key={s}>
                 {i > 0 && (
-                  <span className="text-[#8c8c8c] text-xs shrink-0 scaled-laptop:hidden cramped:hidden">
+                  <span className="text-muted-foreground text-xs shrink-0 scaled-laptop:hidden cramped:hidden">
                     →
                   </span>
                 )}
@@ -653,7 +653,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                     step === s
                       ? 'bg-primary text-primary-foreground'
                       : stepIndex > i
-                        ? 'bg-[#e8e8e8] text-foreground'
+                        ? 'bg-muted text-foreground'
                         : 'bg-card border border-border text-muted-foreground',
                   )}
                 >
@@ -698,7 +698,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
           {step === 'signup' && (
             <div className="max-w-md mx-auto">
               <h4 className="text-xl font-bold font-['Tajawal'] mb-2">{t('checkout.attendeeInfo')}</h4>
-              <p className="text-sm text-[#8c8c8c] mb-6">{t('booking.signUpDesc')}</p>
+              <p className="text-sm text-muted-foreground mb-6">{t('booking.signUpDesc')}</p>
 
               {authMode === 'signup' ? (
                 <form onSubmit={submitSignup} className="space-y-4">
@@ -743,7 +743,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                         {...formFieldDirProps(
                           isRTL,
                           'latin',
-                          'w-full ps-10 pe-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50',
+                          'w-full ps-10 pe-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50',
                         )}
                         placeholder={t('login.emailPlaceholder')}
                       />
@@ -759,7 +759,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                 </form>
               )}
 
-              <p className="mt-6 text-center text-sm text-[#8c8c8c]">
+              <p className="mt-6 text-center text-sm text-muted-foreground">
                 {authMode === 'signup' ? t('login.haveAccount') : t('login.noAccount')}
                 <button
                   type="button"
@@ -780,10 +780,10 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
           {step === 'details' && (
             <div className="max-w-md mx-auto">
               <h4 className="text-xl font-bold font-['Tajawal'] mb-2">{t('checkout.attendeeInfo')}</h4>
-              <p className="text-sm text-[#8c8c8c] mb-6">{t('booking.detailsDesc')}</p>
+              <p className="text-sm text-muted-foreground mb-6">{t('booking.detailsDesc')}</p>
               {profileLoading ? (
                 <div className="flex justify-center py-12">
-                  <Loader2 className="w-8 h-8 animate-spin text-[#8c8c8c]" />
+                  <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
                 </div>
               ) : (
                 <form onSubmit={submitDetails} className="space-y-4">
@@ -816,7 +816,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
           {step === 'verify' && (
             <div className="max-w-md mx-auto">
               <h4 className="text-xl font-bold font-['Tajawal'] mb-2">{t('checkout.verification')}</h4>
-              <p className="text-sm text-[#8c8c8c] mb-6">{t('checkout.verificationDesc')}</p>
+              <p className="text-sm text-muted-foreground mb-6">{t('checkout.verificationDesc')}</p>
               <form onSubmit={verifyOtp} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">{t('checkout.enterCode')}</label>
@@ -831,7 +831,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                       isRTL,
                       'latin',
                       cn(
-                        'w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 font-mono tracking-widest text-2xl',
+                        'w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 font-mono tracking-widest text-2xl',
                         !isRTL && 'text-center',
                       ),
                     )}
@@ -861,7 +861,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
           {step === 'checkout' && (
             <div className="max-w-lg mx-auto space-y-6">
               <h4 className="text-xl font-bold">{t('checkout.payment')}</h4>
-              <p className="text-sm text-[#8c8c8c]">
+              <p className="text-sm text-muted-foreground">
                 {event.title} • {selectedSeats.length} seat(s)
               </p>
               <div className="space-y-3">
@@ -873,14 +873,14 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                     onChange={(e) => setPromoInput(e.target.value.toUpperCase())}
                     disabled={promoLoading || Boolean(appliedPromoCode)}
                     placeholder="SUMMER20"
-                    className="flex-1 px-4 py-3 rounded-lg border border-[#e8e8e8] font-mono uppercase disabled:bg-[#f5f5f5]"
+                    className="flex-1 px-4 py-3 rounded-lg border border-border font-mono uppercase disabled:bg-[#f5f5f5]"
                   />
                   {appliedPromoCode ? (
                     <button
                       type="button"
                       onClick={handleRemovePromo}
                       disabled={promoLoading}
-                      className="px-4 py-3 border border-[#e8e8e8] rounded-lg text-sm font-medium hover:bg-[#f5f5f5] disabled:opacity-70"
+                      className="px-4 py-3 border border-border rounded-lg text-sm font-medium hover:bg-[#f5f5f5] disabled:opacity-70"
                     >
                       {t('checkout.promoRemove')}
                     </button>
@@ -903,7 +903,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
               </div>
               <div className="bg-[#f5f5f5] rounded-xl p-4 space-y-2">
                 <div className="flex justify-between text-sm">
-                  <span className="text-[#8c8c8c]">{t('checkout.subtotal')}</span>
+                  <span className="text-muted-foreground">{t('checkout.subtotal')}</span>
                   <span>{formatPrice(displaySubtotal)}</span>
                 </div>
                 {displayDiscount > 0 && (
@@ -913,10 +913,10 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                   </div>
                 )}
                 <div className="flex justify-between text-sm">
-                  <span className="text-[#8c8c8c]">{t('checkout.tax')}</span>
+                  <span className="text-muted-foreground">{t('checkout.tax')}</span>
                   <span>{formatPrice(0)}</span>
                 </div>
-                <div className="flex justify-between font-bold text-lg border-t border-[#e8e8e8] pt-2">
+                <div className="flex justify-between font-bold text-lg border-t border-border pt-2">
                   <span>{t('checkout.total')}</span>
                   <span>{formatPrice(displayTotal)}</span>
                 </div>

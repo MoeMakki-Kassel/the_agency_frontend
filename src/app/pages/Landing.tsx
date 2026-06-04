@@ -105,19 +105,19 @@ export function Landing() {
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => setFilterValue("all")}
-                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "all" ? "bg-primary text-primary-foreground" : "border border-[#e8e8e8] text-mid-gray hover:border-mid-gray transition-colors"}`}
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "all" ? "bg-primary text-primary-foreground" : "border border-border text-mid-gray hover:border-mid-gray transition-colors"}`}
                 >
                   {t("home.upcoming.all")}
                 </button>
                 <button
                   onClick={() => setFilterValue("this-week")}
-                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "this-week" ? "bg-primary text-primary-foreground" : "border border-[#e8e8e8] text-mid-gray hover:border-mid-gray transition-colors"}`}
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "this-week" ? "bg-primary text-primary-foreground" : "border border-border text-mid-gray hover:border-mid-gray transition-colors"}`}
                 >
                   {t("home.upcoming.thisWeek")}
                 </button>
                 <button
                   onClick={() => setFilterValue("this-month")}
-                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "this-month" ? "bg-primary text-primary-foreground" : "border border-[#e8e8e8] text-mid-gray hover:border-mid-gray transition-colors"}`}
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "this-month" ? "bg-primary text-primary-foreground" : "border border-border text-mid-gray hover:border-mid-gray transition-colors"}`}
                 >
                   {t("home.upcoming.thisMonth")}
                 </button>
@@ -154,7 +154,7 @@ export function Landing() {
                   key={event.id}
                   className="group bg-card rounded-[12px] overflow-hidden border border-border shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-transform hover:-translate-y-1"
                 >
-                  <div className="relative aspect-video overflow-hidden bg-[#e8e8e8]">
+                  <div className="relative aspect-video overflow-hidden bg-muted">
                     <img
                       src={event.cover_photo}
                       alt={event.title}
@@ -188,7 +188,7 @@ export function Landing() {
                       </span>
                     </div>
 
-                    <div className="flex items-end justify-between mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-[#e8e8e8]">
+                    <div className="flex items-end justify-between mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-border">
                       <div>
                         <div className="text-foreground font-bold text-lg sm:text-xl font-display">
                           {lowestPrice != null ? formatFromPrice(lowestPrice) : "—"}
@@ -199,7 +199,7 @@ export function Landing() {
                           href={`tel:${event.contact_phone}`}
                           className="flex items-center p-4 bg-card rounded-lg hover:shadow-md transition-shadow group"
                         >
-                          <button className="p-2 rounded-full border border-[#e8e8e8] text-mid-gray hover:text-foreground hover:border-black transition-colors">
+                          <button className="p-2 rounded-full border border-border text-mid-gray hover:text-foreground hover:border-black transition-colors">
                             <Phone className="w-4 h-4" />
                           </button>
                           <div className="absolute bottom-full right-0 mb-2 w-max px-3 py-1 bg-primary text-primary-foreground text-xs rounded opacity-0 group-hover/tooltip:opacity-100 pointer-events-none transition-opacity">
@@ -218,7 +218,7 @@ export function Landing() {
                       </Link>
                       <Link
                         to={`/event/${slugOrId}`}
-                        className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-[8px] bg-[#e8e8e8]/30 text-ink-black font-medium hover:bg-[#e8e8e8]/50 transition-colors text-sm"
+                        className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-[8px] bg-muted/30 text-ink-black font-medium hover:bg-muted/50 transition-colors text-sm"
                       >
                         {t("home.upcoming.details")}
                       </Link>
@@ -287,14 +287,14 @@ export function Landing() {
       </section>
 
       {/* Section 6 — Testimonials */}
-      <section className="py-12 sm:py-16 md:py-24 bg-background border-t border-[#e8e8e8]">
+      <section className="py-12 sm:py-16 md:py-24 bg-background border-t border-border">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-ink-black mb-10 sm:mb-16 text-3xl sm:text-4xl md:text-5xl">
             {t("home.testimonials.title")}
           </h2>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 sm:gap-8">
             <div className="bg-card text-card-foreground p-6 sm:p-8 rounded-[12px] border border-border shadow-[0_8px_24px_rgba(0,0,0,0.5)] max-w-md text-start flex-1 min-w-[280px]">
-              <div className="flex text-[#8c8c8c] mb-4">
+              <div className="flex text-muted-foreground mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
@@ -303,7 +303,7 @@ export function Landing() {
                 {t("home.testimonials.quote1")}
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-[#e8e8e8] rounded-full overflow-hidden flex-shrink-0">
+                <div className="w-12 h-12 bg-muted rounded-full overflow-hidden flex-shrink-0">
                   <img
                     src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdHxlbnwwfHx8fDE3Nzc4MTM5MTR8MA&ixlib=rb-4.1.0&q=80&w=200"
                     alt="Avatar"
@@ -318,7 +318,7 @@ export function Landing() {
             </div>
 
             <div className="bg-card text-card-foreground p-6 sm:p-8 rounded-[12px] border border-border shadow-[0_8px_24px_rgba(0,0,0,0.5)] max-w-md text-start flex-1 min-w-[280px]">
-              <div className="flex text-[#8c8c8c] mb-4">
+              <div className="flex text-muted-foreground mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
@@ -327,7 +327,7 @@ export function Landing() {
                 {t("home.testimonials.quote2")}
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-[#e8e8e8] rounded-full overflow-hidden flex-shrink-0">
+                <div className="w-12 h-12 bg-muted rounded-full overflow-hidden flex-shrink-0">
                   <img
                     src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzc4MTM5Mjh8MA&ixlib=rb-4.1.0&q=80&w=200"
                     alt="Avatar"

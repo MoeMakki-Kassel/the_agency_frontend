@@ -109,16 +109,16 @@ export function Venues() {
 
                 <div className="p-6">
                   <h3 className="text-2xl font-bold font-['Tajawal'] text-foreground mb-2">{venue.name}</h3>
-                  <div className="flex items-center gap-2 text-[#8c8c8c] mb-4">
+                  <div className="flex items-center gap-2 text-muted-foreground mb-4">
                     <MapPin className="w-4 h-4" />
                     <span className="text-sm">{venue.location}</span>
                     <span className="mx-2">•</span>
                     <span className="text-sm font-medium">Capacity: {venue.capacity}</span>
                   </div>
 
-                  <p className="text-[#8c8c8c] mb-6">{venue.description}</p>
+                  <p className="text-muted-foreground mb-6">{venue.description}</p>
 
-                  <div className="border-t border-[#e8e8e8] pt-4 space-y-2">
+                  <div className="border-t border-border pt-4 space-y-2">
                     <div className="flex items-center gap-2 text-sm text-foreground">
                       <Phone className="w-4 h-4 text-foreground" />
                       <a href={`tel:${venue.phone}`} className="hover:text-foreground transition-colors">{venue.phone}</a>
@@ -139,7 +139,7 @@ export function Venues() {
       <section className="py-24 bg-background">
         <div className="max-w-[1200px] mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold font-['Tajawal'] text-foreground mb-6">Venue Partners</h2>
-          <p className="text-lg text-[#8c8c8c] mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Are you a venue owner looking to host world-class events? Partner with TheAgencyJo to bring exceptional live music to your space.
           </p>
           <a href="mailto:partnerships@theagencyjo.com" className="inline-block px-8 py-3 bg-black text-white font-bold rounded-lg hover:bg-[#525252] transition-colors">

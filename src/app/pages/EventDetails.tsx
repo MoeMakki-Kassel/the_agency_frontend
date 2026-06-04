@@ -413,12 +413,12 @@ export function EventDetails() {
           {Array.isArray(event?.sponsors) && event.sponsors.length > 0 && (
             <section
               aria-label={t("event.sponsors.title")}
-              className="rounded-2xl border border-[#e8e8e8] bg-gradient-to-br from-[#fafafa] to-white p-8 shadow-[0_8px_24px_rgba(20,14,8,0.04)]"
+              className="rounded-2xl border border-border bg-gradient-to-br from-[#fafafa] to-white p-8 shadow-[0_8px_24px_rgba(20,14,8,0.04)]"
             >
               <h2 className="text-2xl md:text-3xl font-bold font-['Tajawal'] mb-2 text-foreground">
                 {t("event.sponsors.title")}
               </h2>
-              <p className="text-sm text-[#8c8c8c] mb-8 max-w-xl">
+              <p className="text-sm text-muted-foreground mb-8 max-w-xl">
                 {t("event.sponsors.subtitle")}
               </p>
               <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 list-none m-0 p-0">
@@ -444,7 +444,7 @@ export function EventDetails() {
                         </span>
                       )}
                       {logo ? (
-                        <span className="mt-3 text-xs text-center text-[#8c8c8c] leading-snug line-clamp-2">
+                        <span className="mt-3 text-xs text-center text-muted-foreground leading-snug line-clamp-2">
                           {name}
                         </span>
                       ) : null}
@@ -470,7 +470,7 @@ export function EventDetails() {
                     <Phone size={20} />
                   </div>
                   <div className="min-w-0">
-                    <div className="text-sm text-[#8c8c8c] mb-1">
+                    <div className="text-sm text-muted-foreground mb-1">
                       {t("event.contact.bookings")}
                     </div>
                     <BidiLtr className="font-bold text-lg block">
@@ -486,7 +486,7 @@ export function EventDetails() {
                     <Mail size={20} />
                   </div>
                   <div className="min-w-0">
-                    <div className="text-sm text-[#8c8c8c] mb-1">
+                    <div className="text-sm text-muted-foreground mb-1">
                       {t("event.contact.email")}
                     </div>
                     <BidiLtr className="font-bold text-lg block break-all">
@@ -495,7 +495,7 @@ export function EventDetails() {
                   </div>
                 </a>
               </div>
-              <div className="flex items-center justify-between border-t border-[#e8e8e8] pt-6">
+              <div className="flex items-center justify-between border-t border-border pt-6">
                 <a
                   href={`https://wa.me/${event?.contact_phone}`}
                   className="flex items-center text-[#525252] font-bold hover:underline"
@@ -503,7 +503,7 @@ export function EventDetails() {
                   <MessageCircle size={20} className="me-2 shrink-0" />
                   {t("event.contact.whatsapp")}
                 </a>
-                {/* <span className="text-sm text-[#8c8c8c]">Mon-Sun, 10am - 8pm</span> */}
+                {/* <span className="text-sm text-muted-foreground">Mon-Sun, 10am - 8pm</span> */}
               </div>
             </div>
           </section>
@@ -516,9 +516,9 @@ export function EventDetails() {
             <h4 className="text-xl font-semibold mb-1">
               {event?.location_name}
             </h4>
-            <p className="text-[#8c8c8c] mb-6">{event?.full_address}</p>
+            <p className="text-muted-foreground mb-6">{event?.full_address}</p>
 
-            <div className="mb-6 rounded-xl overflow-hidden border border-[#e8e8e8] bg-[#e8e8e8] aspect-[16/10] min-h-[220px] max-h-[480px] relative">
+            <div className="mb-6 rounded-xl overflow-hidden border border-border bg-muted aspect-[16/10] min-h-[220px] max-h-[480px] relative">
               {(() => {
                 const embedSrc = event ? getGoogleMapsEmbedSrc(event.map_embed_url) : null;
                 if (embedSrc) {
@@ -576,23 +576,23 @@ export function EventDetails() {
               {sortedTiers.map((tier) => (
                 <div
                   key={tier.id}
-                  className="block border-2 rounded-xl p-4 border-[#e8e8e8]"
+                  className="block border-2 rounded-xl p-4 border-border"
                 >
                   <div className="font-bold text-lg">
                     {displayTierName(tier, t("tier.regular"))}
                   </div>
-                  <div className="text-sm text-[#8c8c8c] mt-1">
+                  <div className="text-sm text-muted-foreground mt-1">
                     <BidiLtr>{formatDecimal(tier.price)}</BidiLtr> {t("event.booking.perSeat")}
                   </div>
                   {tier.description && (
-                    <p className="text-sm text-[#8c8c8c] mt-2">{tier.description}</p>
+                    <p className="text-sm text-muted-foreground mt-2">{tier.description}</p>
                   )}
                 </div>
               ))}
             </div>
 
             {sortedTiers.length > 0 && (
-              <p className="text-sm text-[#8c8c8c] mb-4">
+              <p className="text-sm text-muted-foreground mb-4">
                 {formatFromPrice(minTierPrice ?? 0)}
               </p>
             )}
@@ -606,7 +606,7 @@ export function EventDetails() {
               {t("event.booking.bookNow")}
             </button>
 
-            <div className="flex items-center justify-center gap-4 text-sm text-[#8c8c8c] mb-8 mt-3">
+            <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground mb-8 mt-3">
               <span className="flex items-center">
                 <Lock size={14} className="me-1 shrink-0" /> {t("event.booking.secure")}
               </span>
@@ -622,7 +622,7 @@ export function EventDetails() {
                 onClick={() => void shareEvent()}
                 disabled={!event?.slug && !id}
                 aria-label={t("event.share.aria")}
-                className="w-10 h-10 rounded-full bg-background text-foreground flex items-center justify-center hover:bg-[#e8e8e8] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                className="w-10 h-10 rounded-full bg-background text-foreground flex items-center justify-center hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <Share2 size={18} />
               </button>
@@ -635,7 +635,7 @@ export function EventDetails() {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border p-4 shadow-[0_-4px_12px_rgba(0,0,0,0.1)] z-40">
         <div className="flex items-center justify-between gap-3">
           <div className="flex flex-col">
-            <span className="text-xs text-[#8c8c8c]">
+            <span className="text-xs text-muted-foreground">
               {t("events.from")} {minTierPrice} {t("events.currencyJod")}
             </span>
           </div>

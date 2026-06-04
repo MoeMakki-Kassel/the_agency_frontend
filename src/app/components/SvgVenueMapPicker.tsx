@@ -1061,7 +1061,7 @@ export function SvgVenueMapPicker({
           <button
             type="button"
             onClick={resetView}
-            className="px-3 py-2 text-xs font-medium text-[#525252] border border-[#e8e8e8] rounded-lg hover:bg-muted touch-manipulation min-h-11 sm:min-h-0"
+            className="px-3 py-2 text-xs font-medium text-[#525252] border border-border rounded-lg hover:bg-muted touch-manipulation min-h-11 sm:min-h-0"
           >
             {t('seats.resetView')}
           </button>
@@ -1088,7 +1088,7 @@ export function SvgVenueMapPicker({
 
       <div
         ref={mapWrapRef}
-        className={`relative w-full rounded-xl border border-[#e8e8e8] bg-[#fafafa] select-none ${
+        className={`relative w-full rounded-xl border border-border bg-muted select-none ${
           fillMapArea
             ? 'flex-1 min-h-0 overflow-hidden flex flex-col'
             : 'overflow-auto max-h-[min(52dvh,640px)] sm:max-h-[min(70vh,640px)] p-2'
@@ -1116,7 +1116,7 @@ export function SvgVenueMapPicker({
                 type="button"
                 onClick={resetView}
                 aria-label={t('seats.resetView')}
-                className="h-9 px-2 text-[10px] font-semibold rounded-lg border border-[#e8e8e8] bg-white/95 text-[#525252] touch-manipulation shadow-sm"
+                className="h-9 px-2 text-[10px] font-semibold rounded-lg border border-border bg-white/95 text-[#525252] touch-manipulation shadow-sm"
               >
                 {t('seats.resetView')}
               </button>
@@ -1227,7 +1227,7 @@ export function SvgVenueMapPicker({
 
         {useCompactChrome && (
           <div
-            className="absolute bottom-0 inset-x-0 z-30 border-t border-[#e8e8e8] bg-white/95 backdrop-blur-md rounded-b-xl shadow-[0_-6px_24px_rgba(0,0,0,0.08)] touch-auto"
+            className="absolute bottom-0 inset-x-0 z-30 border-t border-border bg-white/95 backdrop-blur-md rounded-b-xl shadow-[0_-6px_24px_rgba(0,0,0,0.08)] touch-auto"
             data-map-ui
             role="group"
             aria-label={t('seats.filterByTier')}
@@ -1307,7 +1307,7 @@ function ZoomButton({
       onClick={onClick}
       className={`flex items-center justify-center rounded-lg border touch-manipulation ${
         floating
-          ? 'w-9 h-9 border-[#e8e8e8] bg-white/95 text-[#525252] shadow-sm'
+          ? 'w-9 h-9 border-border bg-white/95 text-[#525252] shadow-sm'
           : 'w-11 h-11 sm:w-9 sm:h-9 border-border bg-card text-foreground hover:bg-muted'
       }`}
     >

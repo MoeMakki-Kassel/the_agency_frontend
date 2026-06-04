@@ -193,7 +193,7 @@ export function Events() {
               lang={language === "AR" ? "ar" : "en"}
               dir={fdField.dir}
               className={cn(
-                "md:col-span-2 border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0",
+                "md:col-span-2 border border-border rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0",
                 fdField.className,
               )}
             />
@@ -204,7 +204,7 @@ export function Events() {
               aria-label={t("events.aria.timeFilter")}
               dir={fdField.dir}
               className={cn(
-                "border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0 bg-input text-foreground",
+                "border border-border rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0 bg-input text-foreground",
                 fdField.className,
               )}
             >
@@ -223,7 +223,7 @@ export function Events() {
               aria-label={t("events.aria.locationFilter")}
               dir={fdField.dir}
               className={cn(
-                "border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0 bg-input text-foreground",
+                "border border-border rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0 bg-input text-foreground",
                 fdField.className,
               )}
             >
@@ -240,7 +240,7 @@ export function Events() {
               aria-label={t("events.aria.sortBy")}
               dir={fdField.dir}
               className={cn(
-                "border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0 bg-input text-foreground",
+                "border border-border rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0 bg-input text-foreground",
                 fdField.className,
               )}
             >
@@ -283,7 +283,7 @@ export function Events() {
                       key={event.id}
                       className="group bg-card rounded-[12px] overflow-hidden border border-border shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-transform hover:-translate-y-1"
                     >
-                      <div className="relative aspect-video overflow-hidden bg-[#e8e8e8]">
+                      <div className="relative aspect-video overflow-hidden bg-muted">
                         <img
                           src={event.cover_photo}
                           alt={event.title}
@@ -325,7 +325,7 @@ export function Events() {
                             </Link>
                             <Link
                               to={`/event/${slugOrId}`}
-                              className="shrink-0 px-3 sm:px-4 py-2 rounded-lg bg-[#e8e8e8]/30 text-ink-black font-medium hover:bg-[#e8e8e8]/50 transition-colors text-xs sm:text-sm whitespace-nowrap"
+                              className="shrink-0 px-3 sm:px-4 py-2 rounded-lg bg-muted/30 text-ink-black font-medium hover:bg-muted/50 transition-colors text-xs sm:text-sm whitespace-nowrap"
                             >
                               {t("events.details")}
                             </Link>
@@ -352,7 +352,7 @@ export function Events() {
                     type="button"
                     onClick={() => setPage((p) => Math.max(1, p - 1))}
                     disabled={page === 1}
-                    className="px-3 sm:px-4 py-2 rounded-lg border border-[#e8e8e8] text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#f5f5f5]"
+                    className="px-3 sm:px-4 py-2 rounded-lg border border-border text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#f5f5f5]"
                   >
                     {t("events.pagination.prev")}
                   </button>
@@ -367,7 +367,7 @@ export function Events() {
                     type="button"
                     onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                     disabled={page === totalPages}
-                    className="px-3 sm:px-4 py-2 rounded-lg border border-[#e8e8e8] text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#f5f5f5]"
+                    className="px-3 sm:px-4 py-2 rounded-lg border border-border text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#f5f5f5]"
                   >
                     {t("events.pagination.next")}
                   </button>

@@ -39,10 +39,10 @@ export function About() {
               <h2 className="text-4xl font-bold font-['Tajawal'] text-foreground mb-6">
                 {t("about.mission.title")}
               </h2>
-              <p className="text-lg text-[#8c8c8c] mb-6">
+              <p className="text-lg text-muted-foreground mb-6">
                 {t("about.mission.p1")}{" "}
               </p>
-              <p className="text-lg text-[#8c8c8c]">{t("about.mission.p2")} </p>
+              <p className="text-lg text-muted-foreground">{t("about.mission.p2")} </p>
             </div>
             <div className="relative">
               <img
@@ -69,7 +69,7 @@ export function About() {
               <h3 className="text-xl font-bold text-foreground mb-3">
                 {t("about.values.quality.title")}{" "}
               </h3>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t("about.values.quality.desc")}{" "}
               </p>
             </div>
@@ -80,7 +80,7 @@ export function About() {
               <h3 className="text-xl font-bold text-foreground mb-3">
                 {t("about.values.diversity.title")}{" "}
               </h3>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t("about.values.diversity.desc")}
               </p>
             </div>
@@ -91,7 +91,7 @@ export function About() {
               <h3 className="text-xl font-bold text-foreground mb-3">
                 {t("about.values.community.title")}{" "}
               </h3>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t("about.values.community.desc")}
               </p>
             </div>
@@ -102,7 +102,7 @@ export function About() {
               <h3 className="text-xl font-bold text-foreground mb-3">
                 {t("about.values.accessibility.title")}
               </h3>
-              <p className="text-[#8c8c8c]">
+              <p className="text-muted-foreground">
                 {t("about.values.accessibility.desc")}
               </p>
             </div>

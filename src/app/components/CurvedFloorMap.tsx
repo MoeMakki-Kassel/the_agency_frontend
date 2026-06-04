@@ -75,9 +75,9 @@ export function CurvedFloorMap({
 
   return (
     <div className="space-y-3">
-      <p className="text-xs sm:text-sm text-[#8c8c8c] px-1">{t('seats.mapHint')}</p>
+      <p className="text-xs sm:text-sm text-muted-foreground px-1">{t('seats.mapHint')}</p>
 
-      <div className="relative w-full overflow-auto rounded-xl border border-[#e8e8e8] bg-gradient-to-b from-[#fafafa] to-white p-4 sm:p-5">
+      <div className="relative w-full overflow-auto rounded-xl border border-border bg-gradient-to-b from-[#fafafa] to-white p-4 sm:p-5">
         <svg
           viewBox={svgViewBox}
           className="w-full min-w-[720px] h-auto pointer-events-none"
@@ -222,8 +222,8 @@ export function FloorMapLegend({
           <span>{t('seats.taken')}</span>
         </div>
       </div>
-      <div className="border-t border-[#e8e8e8] pt-3">
-        <p className="text-xs text-[#8c8c8c] mb-2">{t('seats.classColors')}</p>
+      <div className="border-t border-border pt-3">
+        <p className="text-xs text-muted-foreground mb-2">{t('seats.classColors')}</p>
         <div className="flex flex-wrap gap-2">
           {tiers.map((tier) => {
             const c = getTierColor(tier.id, tier.index);
