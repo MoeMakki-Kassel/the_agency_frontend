@@ -7,7 +7,7 @@ export function Privacy() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
       <section className="bg-hero-noir text-white py-16">
         <div className="max-w-[900px] mx-auto px-6">
@@ -25,7 +25,7 @@ export function Privacy() {
           <div className="prose prose-lg max-w-none">
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.intro.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.intro.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('privacy.intro.p1')}
               </p>
@@ -35,12 +35,12 @@ export function Privacy() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.collect.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.collect.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('privacy.collect.intro')}
               </p>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('privacy.collect.personal.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('privacy.collect.personal.title')}</h3>
               <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2 mb-4">
                 <li>{t('privacy.collect.personal.item1')}</li>
                 <li>{t('privacy.collect.personal.item2')}</li>
@@ -49,7 +49,7 @@ export function Privacy() {
                 <li>{t('privacy.collect.personal.item5')}</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('privacy.collect.transaction.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('privacy.collect.transaction.title')}</h3>
               <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2 mb-4">
                 <li>{t('privacy.collect.transaction.item1')}</li>
                 <li>{t('privacy.collect.transaction.item2')}</li>
@@ -57,7 +57,7 @@ export function Privacy() {
                 <li>{t('privacy.collect.transaction.item4')}</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('privacy.collect.technical.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('privacy.collect.technical.title')}</h3>
               <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2">
                 <li>{t('privacy.collect.technical.item1')}</li>
                 <li>{t('privacy.collect.technical.item2')}</li>
@@ -68,7 +68,7 @@ export function Privacy() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.use.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.use.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('privacy.use.intro')}
               </p>
@@ -85,29 +85,29 @@ export function Privacy() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.sharing.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.sharing.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('privacy.sharing.intro')}
               </p>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('privacy.sharing.organizers.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('privacy.sharing.organizers.title')}</h3>
               <p className="text-[#8c8c8c] mb-4">
                 {t('privacy.sharing.organizers.desc')}
               </p>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('privacy.sharing.providers.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('privacy.sharing.providers.title')}</h3>
               <p className="text-[#8c8c8c] mb-4">
                 {t('privacy.sharing.providers.desc')}
               </p>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('privacy.sharing.legal.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('privacy.sharing.legal.title')}</h3>
               <p className="text-[#8c8c8c]">
                 {t('privacy.sharing.legal.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.security.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.security.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('privacy.security.intro')}
               </p>
@@ -121,7 +121,7 @@ export function Privacy() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.rights.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.rights.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('privacy.rights.intro')}
               </p>
@@ -136,7 +136,7 @@ export function Privacy() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.cookies.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.cookies.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('privacy.cookies.intro')}
               </p>
@@ -151,40 +151,40 @@ export function Privacy() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.children.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.children.title')}</h2>
               <p className="text-[#8c8c8c]">
                 {t('privacy.children.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.international.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.international.title')}</h2>
               <p className="text-[#8c8c8c]">
                 {t('privacy.international.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.changes.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.changes.title')}</h2>
               <p className="text-[#8c8c8c]">
                 {t('privacy.changes.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('privacy.contact.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('privacy.contact.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('privacy.contact.intro')}
               </p>
               <div className="bg-[#e8e8e8] p-6 rounded-lg">
-                <p className="text-black mb-2"><strong>{t('privacy.contact.email')}</strong> privacy@theagencyjo.com</p>
-                <p className="text-black mb-2">
+                <p className="text-foreground mb-2"><strong>{t('privacy.contact.email')}</strong> privacy@theagencyjo.com</p>
+                <p className="text-foreground mb-2">
                   <strong>{t('privacy.contact.phone')}</strong>{' '}
                   <span dir="ltr" className="inline-block [unicode-bidi:isolate] tabular-nums">
                     {t('privacy.contact.phoneValue')}
                   </span>
                 </p>
-                <p className="text-black"><strong>{t('privacy.contact.address')}</strong> {t('privacy.contact.addressValue')}</p>
+                <p className="text-foreground"><strong>{t('privacy.contact.address')}</strong> {t('privacy.contact.addressValue')}</p>
               </div>
             </div>
 

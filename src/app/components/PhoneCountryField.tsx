@@ -39,8 +39,8 @@ export function PhoneCountryField({
   const fdTel = formFieldDirProps(
     isRTL,
     "latin",
-    `box-border h-12 min-h-12 w-full min-w-0 max-w-full flex-1 rounded-lg border bg-white px-3 text-sm leading-none text-ink-black placeholder:text-[#8c8c8c] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black disabled:opacity-60 ${
-      invalid ? "border-red-500 focus:ring-red-500/40" : "border-[#e8e8e8]"
+    `box-border h-12 min-h-12 w-full min-w-0 max-w-full flex-1 rounded-lg border bg-input px-3 text-sm leading-none text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary disabled:opacity-60 ${
+      invalid ? "border-red-500 focus:ring-red-500/40" : "border-border"
     }`,
   );
 
@@ -61,7 +61,7 @@ export function PhoneCountryField({
           type="button"
           aria-label={`${countryNameForLocale(country.iso2, country.name, language)}, +${country.dial}`}
           dir="ltr"
-          className="h-12 min-h-12 w-full rounded-lg border border-[#e8e8e8] bg-white px-2.5 text-sm shadow-none focus:ring-2 focus:ring-black/50 focus:border-black data-[size=default]:h-12 text-start"
+          className="h-12 min-h-12 w-full rounded-lg border border-border bg-input text-foreground px-2.5 text-sm shadow-none focus:ring-2 focus:ring-primary/50 focus:border-primary data-[size=default]:h-12 text-start"
         >
           <div className="flex min-w-0 items-center gap-1.5">
             <CountryFlagGlyph iso2={country.iso2} className="h-[1.125rem] w-[1.6875rem] shrink-0" />
@@ -70,7 +70,7 @@ export function PhoneCountryField({
             </BidiLtr>
           </div>
         </SelectTrigger>
-        <SelectContent className="max-h-72 z-[100] bg-white border border-[#e8e8e8]" dir={isRTL ? "rtl" : "ltr"}>
+        <SelectContent className="max-h-72 z-[100] bg-popover text-popover-foreground border border-border" dir={isRTL ? "rtl" : "ltr"}>
           {COUNTRY_DIAL_CODES.map((c) => {
             const displayName = countryNameForLocale(c.iso2, c.name, language);
             return (
@@ -82,7 +82,7 @@ export function PhoneCountryField({
               >
                 <span className={`flex items-center gap-2.5 py-0.5 ${isRTL ? "flex-row-reverse" : ""}`}>
                   <CountryFlagGlyph iso2={c.iso2} className="shrink-0" />
-                  <BidiLtr className="font-medium text-[#1f1b16] shrink-0">
+                  <BidiLtr className="font-medium text-foreground shrink-0">
                     +{c.dial}
                   </BidiLtr>
                   <span className="text-mid-gray truncate text-xs sm:text-sm text-start">

@@ -24,43 +24,46 @@
 
 :root {
   --font-size: 16px;
-  --background: #FAFAFA;
-  --foreground: #0A0A0A;
-  --card: #FFFFFF;
-  --card-foreground: #0A0A0A;
-  --popover: #FFFFFF;
-  --popover-foreground: #0A0A0A;
+  /* Default theme is dark to match the red+black brand. Cards stay light
+     so they pop as content islands against the dark page. */
+  --background: #0A0A0A;
+  --foreground: #FAFAFA;
+  --card: #18181B;
+  --card-foreground: #FAFAFA;
+  --popover: #18181B;
+  --popover-foreground: #FAFAFA;
   --primary: #DC2626;
   --primary-foreground: #FFFFFF;
-  --secondary: #18181B;
+  --secondary: #27272A;
   --secondary-foreground: #FAFAFA;
-  --muted: #F4F4F5;
-  --muted-foreground: #71717A;
+  --muted: #27272A;
+  --muted-foreground: #A1A1AA;
   --accent: #7F1D1D;
   --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
-  --border: #E4E4E7;
-  --input: #FFFFFF;
-  --input-background: #FFFFFF;
-  --switch-background: #E4E4E7;
+  --border: #27272A;
+  --input: #18181B;
+  --input-background: #18181B;
+  --switch-background: #27272A;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   --ring: #DC2626;
   --radius: 12px;
 
-  /* Named aliases — repurposed to the red+black palette so existing
-     class usages (text-terracotta, bg-bone, etc.) auto-rebrand. */
-  --ink-black: #0A0A0A;
-  --bone: #FAFAFA;
+  /* Named aliases — repurposed for the dark red+black palette.
+     Some are inverted so existing `text-deep-charcoal` / `text-ink-black`
+     usages don't become invisible on a dark page. */
+  --ink-black: #FAFAFA;           /* was dark text; now light text on dark bg */
+  --bone: #0A0A0A;                /* was light bg; now dark bg */
   --pure-white: #FFFFFF;
-  --terracotta: #DC2626;    /* signature red */
-  --warm-amber: #EF4444;    /* bright red */
-  --stage-crimson: #7F1D1D; /* deep red */
-  --warm-gray: #E4E4E7;
-  --mid-gray: #71717A;
-  --deep-charcoal: #18181B;
-  --olive: #B91C1C;         /* ember red — gradient midpoint */
+  --terracotta: #DC2626;          /* signature red */
+  --warm-amber: #EF4444;          /* bright red */
+  --stage-crimson: #7F1D1D;       /* deep red */
+  --warm-gray: #27272A;           /* dark gray (was light) */
+  --mid-gray: #A1A1AA;            /* mid-light gray for muted text on dark */
+  --deep-charcoal: #FAFAFA;       /* readable text colour on dark sections */
+  --olive: #B91C1C;               /* ember red — gradient midpoint */
   --brick-red: #EF4444;
 }
 

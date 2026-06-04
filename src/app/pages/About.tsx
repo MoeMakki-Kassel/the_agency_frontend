@@ -11,7 +11,7 @@ export function About() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section  test1*/}
       <section className="bg-hero-noir text-white py-24">
         <div className="max-w-[1200px] mx-auto px-6">
@@ -36,7 +36,7 @@ export function About() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold font-['Tajawal'] text-black mb-6">
+              <h2 className="text-4xl font-bold font-['Tajawal'] text-foreground mb-6">
                 {t("about.mission.title")}
               </h2>
               <p className="text-lg text-[#8c8c8c] mb-6">
@@ -56,17 +56,17 @@ export function About() {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background">
         <div className="max-w-[1200px] mx-auto px-6">
-          <h2 className="text-4xl font-bold font-['Tajawal'] text-black text-center mb-16">
+          <h2 className="text-4xl font-bold font-['Tajawal'] text-foreground text-center mb-16">
             {t("about.values.title")}{" "}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-black/10 flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-black" />
+                <Star className="w-8 h-8 text-foreground" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3">
+              <h3 className="text-xl font-bold text-foreground mb-3">
                 {t("about.values.quality.title")}{" "}
               </h3>
               <p className="text-[#8c8c8c]">
@@ -75,9 +75,9 @@ export function About() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-black/10 flex items-center justify-center mx-auto mb-4">
-                <Music className="w-8 h-8 text-black" />
+                <Music className="w-8 h-8 text-foreground" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3">
+              <h3 className="text-xl font-bold text-foreground mb-3">
                 {t("about.values.diversity.title")}{" "}
               </h3>
               <p className="text-[#8c8c8c]">
@@ -86,9 +86,9 @@ export function About() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-black/10 flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-black" />
+                <Users className="w-8 h-8 text-foreground" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3">
+              <h3 className="text-xl font-bold text-foreground mb-3">
                 {t("about.values.community.title")}{" "}
               </h3>
               <p className="text-[#8c8c8c]">
@@ -97,9 +97,9 @@ export function About() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-black/10 flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-black" />
+                <Globe className="w-8 h-8 text-foreground" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3">
+              <h3 className="text-xl font-bold text-foreground mb-3">
                 {t("about.values.accessibility.title")}
               </h3>
               <p className="text-[#8c8c8c]">

@@ -18,7 +18,7 @@ export default function PaymentResult() {
 
   if (status === "loading") {
     return (
-      <div className="bg-white min-h-screen flex items-center justify-center font-['Inter']">
+      <div className="bg-background min-h-screen flex items-center justify-center font-['Inter']">
         <p className="text-[#8c8c8c]">Processing your payment…</p>
       </div>
     );
@@ -27,7 +27,7 @@ export default function PaymentResult() {
   const isPaid = status === "paid";
 
   return (
-    <div className="bg-white min-h-screen flex items-center justify-center font-['Inter'] px-4 py-16">
+    <div className="bg-background min-h-screen flex items-center justify-center font-['Inter'] px-4 py-16">
       <div className="w-full max-w-md text-center space-y-6">
 
         {/* Icon */}
@@ -53,7 +53,7 @@ export default function PaymentResult() {
 
         {/* QR / reference card */}
         {isPaid && reservationId && (
-          <div className="bg-white p-6 rounded-2xl max-w-sm mx-auto my-8 border border-[#8c8c8c]">
+          <div className="bg-card text-card-foreground p-6 rounded-2xl max-w-sm mx-auto my-8 border border-border">
             {/* <div className="w-48 h-48 bg-white mx-auto flex items-center justify-center p-2 mb-4 border border-[#e8e8e8] rounded-lg">
               <img
                 src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(reservationId)}`}
@@ -62,7 +62,7 @@ export default function PaymentResult() {
               />
             </div> */}
             <p className="text-sm text-[#8c8c8c]">Booking reference</p>
-            <p className="font-mono font-bold text-black mt-1">{reservationId}</p>
+            <p className="font-mono font-bold text-foreground mt-1">{reservationId}</p>
           </div>
         )}
 
@@ -84,7 +84,7 @@ export default function PaymentResult() {
               </Link>
               <Link
                 to="/events"
-                className="py-3 border-2 border-black text-black font-bold rounded-lg hover:bg-white transition-colors text-center"
+                className="py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors text-center"
               >
                 Browse More Events
               </Link>
@@ -99,7 +99,7 @@ export default function PaymentResult() {
               </button>
               <Link
                 to="/events"
-                className="py-3 border-2 border-black text-black font-bold rounded-lg hover:bg-white transition-colors text-center"
+                className="py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors text-center"
               >
                 Browse Events
               </Link>

@@ -234,20 +234,20 @@ export function Profile() {
 
   return (
     <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-[#8c8c8c] hover:text-black transition-colors mb-6">
+      <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-[#8c8c8c] hover:text-foreground transition-colors mb-6">
         <ArrowLeft size={18} /><span className="text-sm font-medium">{t("common.back")}</span>
       </button>
-      <h1 className="text-3xl font-bold text-black mb-6">{t("profile.title")}</h1>
+      <h1 className="text-3xl font-bold text-foreground mb-6">{t("profile.title")}</h1>
 
       {error && <div className="mb-6 p-4 rounded-lg bg-red-50 text-red-700 border border-red-200">{error}</div>}
       {success && <div className="mb-6 p-4 rounded-lg bg-green-50 text-green-700 border border-green-200">{success}</div>}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <section className="lg:col-span-1 min-w-0 bg-white border border-[#e8e8e8] rounded-xl p-6 h-fit">
+        <section className="lg:col-span-1 min-w-0 bg-card text-card-foreground border border-border rounded-xl p-6 h-fit">
           <h2 className="text-xl font-semibold mb-4">{t("profile.myInfo")}</h2>
           <form onSubmit={handleSave} className="space-y-4">
             <div>
-              <label className="text-sm font-medium text-black block mb-1">{t("profile.firstName")}</label>
+              <label className="text-sm font-medium text-foreground block mb-1">{t("profile.firstName")}</label>
               <input
                 type="text"
                 value={formData.first_name}
@@ -260,7 +260,7 @@ export function Profile() {
                 {...formFieldDirProps(
                   isRTL,
                   "text",
-                  `w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black/40 ${
+                  `w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/40 ${
                     fieldErrors.first_name ? "border-red-500" : "border-[#e8e8e8]"
                   }`,
                 )}
@@ -270,7 +270,7 @@ export function Profile() {
               )}
             </div>
             <div>
-              <label className="text-sm font-medium text-black block mb-1">{t("profile.lastName")}</label>
+              <label className="text-sm font-medium text-foreground block mb-1">{t("profile.lastName")}</label>
               <input
                 type="text"
                 value={formData.last_name ?? ""}
@@ -283,7 +283,7 @@ export function Profile() {
                 {...formFieldDirProps(
                   isRTL,
                   "text",
-                  `w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black/40 ${
+                  `w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/40 ${
                     fieldErrors.last_name ? "border-red-500" : "border-[#e8e8e8]"
                   }`,
                 )}
@@ -293,7 +293,7 @@ export function Profile() {
               )}
             </div>
             <div>
-              <label className="text-sm font-medium text-black block mb-1">{t("profile.email")}</label>
+              <label className="text-sm font-medium text-foreground block mb-1">{t("profile.email")}</label>
               <input
                 type="email"
                 value={formData.email}
@@ -301,12 +301,12 @@ export function Profile() {
                 {...formFieldDirProps(
                   isRTL,
                   "latin",
-                  "w-full border border-[#e8e8e8] rounded-lg px-3 py-2 bg-[#f7f7f7] text-[#666]",
+                  "w-full border border-border rounded-lg px-3 py-2 bg-muted text-muted-foreground",
                 )}
               />
             </div>
             <div className="min-w-0 w-full">
-              <label className="text-sm font-medium text-black block mb-1">{t("profile.phone")}</label>
+              <label className="text-sm font-medium text-foreground block mb-1">{t("profile.phone")}</label>
               <PhoneCountryField
                 country={getCountryByIso(phoneCountryIso) ?? COUNTRY_DIAL_CODES[0]}
                 onCountryChange={(iso) => {
@@ -329,7 +329,7 @@ export function Profile() {
               )}
             </div>
             <div>
-              <label className="text-sm font-medium text-black block mb-1">{t("profile.age")}</label>
+              <label className="text-sm font-medium text-foreground block mb-1">{t("profile.age")}</label>
               <input
                 type="number"
                 min={13}
@@ -347,7 +347,7 @@ export function Profile() {
                 {...formFieldDirProps(
                   isRTL,
                   "latin",
-                  `w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black/40 ${
+                  `w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/40 ${
                     fieldErrors.age ? "border-red-500" : "border-[#e8e8e8]"
                   }`,
                 )}
@@ -359,28 +359,28 @@ export function Profile() {
             <button
               type="submit"
               disabled={saving}
-              className="w-full px-4 py-2 rounded-lg bg-black text-white hover:bg-[#525252] transition-colors disabled:opacity-60"
+              className="w-full px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-accent transition-colors disabled:opacity-60"
             >
               {saving ? t("profile.saving") : t("profile.save")}
             </button>
           </form>
         </section>
 
-        <section className="lg:col-span-2 bg-white border border-[#e8e8e8] rounded-xl p-6">
+        <section className="lg:col-span-2 bg-card text-card-foreground border border-border rounded-xl p-6">
           <h2 className="text-xl font-semibold mb-4">{t("profile.myReservations")}</h2>
           {reservations.length === 0 ? (
-            <p className="text-[#666]">{t("profile.noReservations")}</p>
+            <p className="text-muted-foreground">{t("profile.noReservations")}</p>
           ) : (
             <div className="space-y-4">
               {reservations.map((reservation) => (
                 <article key={reservation.id} className="border border-[#e8e8e8] rounded-lg p-4">
                   <div className="flex flex-wrap gap-2 items-center justify-between mb-2">
-                    <h3 className="font-semibold text-black">{reservation.events?.title || t("profile.untitledEvent")}</h3>
-                    <span className="text-xs px-2 py-1 rounded-full bg-[#f2f2f2] text-black uppercase">
+                    <h3 className="font-semibold text-foreground">{reservation.events?.title || t("profile.untitledEvent")}</h3>
+                    <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground uppercase">
                       {reservation.payment_status}
                     </span>
                   </div>
-                  <div className="text-sm text-[#666] space-y-1">
+                  <div className="text-sm text-muted-foreground space-y-1">
                     <p>
                       {t("profile.reference")}:{" "}
                       {reservation.reference_number != null ? (
@@ -407,12 +407,12 @@ export function Profile() {
                       {reservation.reservation_items?.map((item) => item.seats?.seat_number).filter(Boolean).join(", ") || "-"}
                     </p>
                     {reservation.payment_status === "paid" && (
-                      <div className="flex flex-wrap gap-2 pt-3 mt-2 border-t border-[#e8e8e8]">
+                      <div className="flex flex-wrap gap-2 pt-3 mt-2 border-t border-border">
                         <button
                           type="button"
                           disabled={downloading?.id === reservation.id}
                           onClick={() => void downloadReservationPdf(reservation.id, "tickets")}
-                          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-black text-black text-sm font-medium hover:bg-black hover:text-white transition-colors disabled:opacity-50"
+                          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-black text-foreground text-sm font-medium hover:bg-black hover:text-white transition-colors disabled:opacity-50"
                         >
                           <Download className="w-4 h-4 shrink-0" />
                           {downloading?.id === reservation.id && downloading.kind === "tickets"
@@ -423,7 +423,7 @@ export function Profile() {
                           type="button"
                           disabled={downloading?.id === reservation.id}
                           onClick={() => void downloadReservationPdf(reservation.id, "receipt")}
-                          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-[#e8e8e8] text-black text-sm font-medium hover:border-black hover:bg-[#f7f7f7] transition-colors disabled:opacity-50"
+                          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-border text-foreground text-sm font-medium hover:border-primary hover:bg-white/5 transition-colors disabled:opacity-50"
                         >
                           <Download className="w-4 h-4 shrink-0" />
                           {downloading?.id === reservation.id && downloading.kind === "receipt"

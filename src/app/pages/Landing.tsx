@@ -94,7 +94,7 @@ export function Landing() {
       {/* Section 3 — Upcoming Events Grid */}
       <section
         id="upcoming-events"
-        className="py-12 sm:py-16 md:py-24 bg-white"
+        className="py-12 sm:py-16 md:py-24 bg-background"
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
@@ -105,19 +105,19 @@ export function Landing() {
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => setFilterValue("all")}
-                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "all" ? "bg-ink-black text-white" : "border border-[#e8e8e8] text-mid-gray hover:border-mid-gray transition-colors"}`}
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "all" ? "bg-primary text-primary-foreground" : "border border-[#e8e8e8] text-mid-gray hover:border-mid-gray transition-colors"}`}
                 >
                   {t("home.upcoming.all")}
                 </button>
                 <button
                   onClick={() => setFilterValue("this-week")}
-                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "this-week" ? "bg-ink-black text-white" : "border border-[#e8e8e8] text-mid-gray hover:border-mid-gray transition-colors"}`}
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "this-week" ? "bg-primary text-primary-foreground" : "border border-[#e8e8e8] text-mid-gray hover:border-mid-gray transition-colors"}`}
                 >
                   {t("home.upcoming.thisWeek")}
                 </button>
                 <button
                   onClick={() => setFilterValue("this-month")}
-                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "this-month" ? "bg-ink-black text-white" : "border border-[#e8e8e8] text-mid-gray hover:border-mid-gray transition-colors"}`}
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm font-medium ${filterValue === "this-month" ? "bg-primary text-primary-foreground" : "border border-[#e8e8e8] text-mid-gray hover:border-mid-gray transition-colors"}`}
                 >
                   {t("home.upcoming.thisMonth")}
                 </button>
@@ -126,7 +126,7 @@ export function Landing() {
             </div>
             <Link
               to="/events"
-              className="hidden md:flex items-center gap-2 text-black font-medium hover:underline"
+              className="hidden md:flex items-center gap-2 text-foreground font-medium hover:underline"
             >
               {t("home.upcoming.viewAll")} <ArrowRight className="w-4 h-4" />
             </Link>
@@ -152,7 +152,7 @@ export function Landing() {
               return (
                 <div
                   key={event.id}
-                  className="group bg-white rounded-[12px] overflow-hidden shadow-[0_8px_24px_rgba(20,14,8,0.08)] transition-transform hover:-translate-y-1"
+                  className="group bg-card rounded-[12px] overflow-hidden border border-border shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-transform hover:-translate-y-1"
                 >
                   <div className="relative aspect-video overflow-hidden bg-[#e8e8e8]">
                     <img
@@ -167,7 +167,7 @@ export function Landing() {
                       {event.subtitle && (
                         <div className="min-w-0 flex-1 flex justify-end overflow-hidden">
                           <div
-                            className="max-w-full truncate bg-ink-black/80 backdrop-blur-sm px-2 sm:px-3 py-1 rounded-full text-xs font-medium text-white"
+                            className="max-w-full truncate bg-foreground/90 backdrop-blur-sm px-2 sm:px-3 py-1 rounded-full text-xs font-medium text-white"
                             title={event.subtitle}
                           >
                             {event.subtitle}
@@ -190,19 +190,19 @@ export function Landing() {
 
                     <div className="flex items-end justify-between mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-[#e8e8e8]">
                       <div>
-                        <div className="text-black font-bold text-lg sm:text-xl font-display">
+                        <div className="text-foreground font-bold text-lg sm:text-xl font-display">
                           {lowestPrice != null ? formatFromPrice(lowestPrice) : "—"}
                         </div>
                       </div>
                       <div className="group/tooltip relative">
                         <a
                           href={`tel:${event.contact_phone}`}
-                          className="flex items-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow group"
+                          className="flex items-center p-4 bg-card rounded-lg hover:shadow-md transition-shadow group"
                         >
-                          <button className="p-2 rounded-full border border-[#e8e8e8] text-mid-gray hover:text-black hover:border-black transition-colors">
+                          <button className="p-2 rounded-full border border-[#e8e8e8] text-mid-gray hover:text-foreground hover:border-black transition-colors">
                             <Phone className="w-4 h-4" />
                           </button>
-                          <div className="absolute bottom-full right-0 mb-2 w-max px-3 py-1 bg-ink-black text-white text-xs rounded opacity-0 group-hover/tooltip:opacity-100 pointer-events-none transition-opacity">
+                          <div className="absolute bottom-full right-0 mb-2 w-max px-3 py-1 bg-primary text-primary-foreground text-xs rounded opacity-0 group-hover/tooltip:opacity-100 pointer-events-none transition-opacity">
                             {t("event.contact.title")}
                           </div>
                         </a>
@@ -232,7 +232,7 @@ export function Landing() {
           <div className="mt-8 sm:mt-12 text-center md:hidden">
             <Link
               to="/events"
-              className="inline-flex items-center gap-2 text-black font-medium hover:underline"
+              className="inline-flex items-center gap-2 text-foreground font-medium hover:underline"
             >
               {t("home.upcoming.viewAll")} <ArrowRight className="w-4 h-4" />
             </Link>
@@ -243,15 +243,15 @@ export function Landing() {
      
 
       {/* Section 5 — Why TheAgencyJo. */}
-      <section className="py-12 sm:py-16 md:py-24 bg-pure-white">
+      <section className="py-12 sm:py-16 md:py-24 bg-background">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-ink-black mb-10 sm:mb-16 text-3xl sm:text-4xl md:text-5xl">
             {t("home.why.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12">
             <div className="flex flex-col items-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mb-4 sm:mb-6">
-                <Star className="w-7 h-7 sm:w-8 sm:h-8 text-black" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 sm:mb-6">
+                <Star className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
               </div>
               <h4 className="text-ink-black mb-2 sm:mb-3 text-lg sm:text-xl">
                 {t("home.why.curated.title")}
@@ -261,8 +261,8 @@ export function Landing() {
               </p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mb-4 sm:mb-6">
-                <ShieldCheck className="w-7 h-7 sm:w-8 sm:h-8 text-black" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 sm:mb-6">
+                <ShieldCheck className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
               </div>
               <h4 className="text-ink-black mb-2 sm:mb-3 text-lg sm:text-xl">
                 {t("home.why.secure.title")}
@@ -272,8 +272,8 @@ export function Landing() {
               </p>
             </div>
             <div className="flex flex-col items-center sm:col-span-2 md:col-span-1">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mb-4 sm:mb-6">
-                <Ticket className="w-7 h-7 sm:w-8 sm:h-8 text-black" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 sm:mb-6">
+                <Ticket className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
               </div>
               <h4 className="text-ink-black mb-2 sm:mb-3 text-lg sm:text-xl">
                 {t("home.why.tickets.title")}
@@ -287,13 +287,13 @@ export function Landing() {
       </section>
 
       {/* Section 6 — Testimonials */}
-      <section className="py-12 sm:py-16 md:py-24 bg-white border-t border-[#e8e8e8]">
+      <section className="py-12 sm:py-16 md:py-24 bg-background border-t border-[#e8e8e8]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-ink-black mb-10 sm:mb-16 text-3xl sm:text-4xl md:text-5xl">
             {t("home.testimonials.title")}
           </h2>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 sm:gap-8">
-            <div className="bg-white p-6 sm:p-8 rounded-[12px] shadow-sm max-w-md text-start flex-1 min-w-[280px]">
+            <div className="bg-card text-card-foreground p-6 sm:p-8 rounded-[12px] border border-border shadow-[0_8px_24px_rgba(0,0,0,0.5)] max-w-md text-start flex-1 min-w-[280px]">
               <div className="flex text-[#8c8c8c] mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
@@ -317,7 +317,7 @@ export function Landing() {
               </div>
             </div>
 
-            <div className="bg-white p-6 sm:p-8 rounded-[12px] shadow-sm max-w-md text-start flex-1 min-w-[280px]">
+            <div className="bg-card text-card-foreground p-6 sm:p-8 rounded-[12px] border border-border shadow-[0_8px_24px_rgba(0,0,0,0.5)] max-w-md text-start flex-1 min-w-[280px]">
               <div className="flex text-[#8c8c8c] mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
@@ -344,7 +344,7 @@ export function Landing() {
       </section>
 
       {/* Section 7 — Newsletter */}
-      <section className="py-12 sm:py-16 md:py-24 bg-[#e8e8e8]">
+      <section className="py-12 sm:py-16 md:py-24 bg-hero-noir border-t border-border">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2 className="text-ink-black mb-3 sm:mb-4 text-3xl sm:text-4xl md:text-5xl">
             {t("home.newsletter.title")}
@@ -389,7 +389,7 @@ export function Landing() {
               {...formFieldDirProps(
                 isRTL,
                 "latin",
-                "flex-1 bg-white border border-[#e8e8e8] rounded-[8px] px-4 py-2.5 sm:py-3 focus:outline-none focus:border-black focus:ring-2 focus:ring-black/50 text-sm sm:text-base min-w-0",
+                "flex-1 bg-input text-foreground border border-border rounded-[8px] px-4 py-2.5 sm:py-3 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/50 text-sm sm:text-base min-w-0",
               )}
             />
             <button

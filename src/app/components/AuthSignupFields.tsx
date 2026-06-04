@@ -42,7 +42,7 @@ export function AuthSignupFields({ values, onChange, emailDisabled, phoneRequire
           onChange={(e) => onChange({ firstName: e.target.value })}
           required
           placeholder={t('login.firstNamePlaceholder')}
-          {...formFieldDirProps(isRTL, 'text', 'w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black bg-white')}
+          {...formFieldDirProps(isRTL, 'text', 'w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground')}
         />
       </div>
 
@@ -57,7 +57,7 @@ export function AuthSignupFields({ values, onChange, emailDisabled, phoneRequire
           onChange={(e) => onChange({ lastName: e.target.value })}
           required
           placeholder={t('login.lastNamePlaceholder')}
-          {...formFieldDirProps(isRTL, 'text', 'w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black bg-white')}
+          {...formFieldDirProps(isRTL, 'text', 'w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground')}
         />
       </div>
 
@@ -76,7 +76,7 @@ export function AuthSignupFields({ values, onChange, emailDisabled, phoneRequire
           {...formFieldDirProps(
             isRTL,
             'latin',
-            'w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black bg-white disabled:opacity-60',
+            'w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground disabled:opacity-60',
           )}
         />
       </div>
@@ -113,7 +113,7 @@ export function AuthSignupFields({ values, onChange, emailDisabled, phoneRequire
           {...formFieldDirProps(
             isRTL,
             'latin',
-            'w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black bg-white',
+            'w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground',
           )}
         />
       </div>

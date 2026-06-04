@@ -120,7 +120,7 @@ export function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-hero-noir text-white py-24">
         <div className="max-w-[1200px] mx-auto px-6">
@@ -140,54 +140,54 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Cards */}
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-xl shadow-[0_8px_24px_rgba(20,14,8,0.08)]">
+              <div className="bg-card text-card-foreground p-6 rounded-xl border border-border shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
                 <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center mb-4">
-                  <Phone className="w-6 h-6 text-black" />
+                  <Phone className="w-6 h-6 text-foreground" />
                 </div>
-                <h3 className="text-lg font-bold text-black mb-2">{t("contact.call.title")}</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">{t("contact.call.title")}</h3>
                 <p className="text-sm text-[#8c8c8c] mb-3">{t("contact.call.hours")}</p>
-                <a href={`tel:${contactPhone1}`} className="text-black font-medium hover:underline block">
+                <a href={`tel:${contactPhone1}`} className="text-foreground font-medium hover:underline block">
                   {settings?.contact_phone_label_1
                     ? formatLabeledPhone(settings.contact_phone_label_1, contactPhone1)
                     : formatLabeledPhone(null, contactPhone1)}
                 </a>
-                <a href={`tel:${contactPhone2}`} className="text-black font-medium hover:underline block mt-1">
+                <a href={`tel:${contactPhone2}`} className="text-foreground font-medium hover:underline block mt-1">
                   {settings?.contact_phone_label_2
                     ? formatLabeledPhone(settings.contact_phone_label_2, contactPhone2)
                     : formatLabeledPhone(null, contactPhone2)}
                 </a>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-[0_8px_24px_rgba(20,14,8,0.08)]">
+              <div className="bg-card text-card-foreground p-6 rounded-xl border border-border shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
                 <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center mb-4">
-                  <Mail className="w-6 h-6 text-black" />
+                  <Mail className="w-6 h-6 text-foreground" />
                 </div>
-                <h3 className="text-lg font-bold text-black mb-2">{t("contact.email.title")}</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">{t("contact.email.title")}</h3>
                 <p className="text-sm text-[#8c8c8c] mb-3">{t("contact.email.response")}</p>
-                <a href={`mailto:${contactEmail}`} className="text-black font-medium hover:underline block">
+                <a href={`mailto:${contactEmail}`} className="text-foreground font-medium hover:underline block">
                   <BidiLtr className="break-all">{contactEmail}</BidiLtr>
                 </a>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-[0_8px_24px_rgba(20,14,8,0.08)]">
+              <div className="bg-card text-card-foreground p-6 rounded-xl border border-border shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
                 <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center mb-4">
-                  <MessageCircle className="w-6 h-6 text-black" />
+                  <MessageCircle className="w-6 h-6 text-foreground" />
                 </div>
-                <h3 className="text-lg font-bold text-black mb-2">{t("contact.whatsapp.title")}</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">{t("contact.whatsapp.title")}</h3>
                 <p className="text-sm text-[#8c8c8c] mb-3">{t("contact.whatsapp.desc")}</p>
                 {whatsappEnabled && whatsappHref ? (
-                  <a href={whatsappHref} target="_blank" rel="noreferrer" className="text-black font-medium hover:underline">
+                  <a href={whatsappHref} target="_blank" rel="noreferrer" className="text-foreground font-medium hover:underline">
                     {t("contact.whatsapp.cta")}
                   </a>
                 ) : null}
               </div>
 
               {visitAddress ? (
-                <div className="bg-white p-6 rounded-xl shadow-[0_8px_24px_rgba(20,14,8,0.08)]">
+                <div className="bg-card text-card-foreground p-6 rounded-xl border border-border shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
                   <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center mb-4">
-                    <MapPin className="w-6 h-6 text-black" />
+                    <MapPin className="w-6 h-6 text-foreground" />
                   </div>
-                  <h3 className="text-lg font-bold text-black mb-2">{t("contact.visit.title")}</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-2">{t("contact.visit.title")}</h3>
                   <p className="text-sm text-[#8c8c8c] whitespace-pre-line">{visitAddress}</p>
                 </div>
               ) : null}
@@ -195,8 +195,8 @@ export function Contact() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white p-8 rounded-xl shadow-[0_8px_24px_rgba(20,14,8,0.08)]">
-                <h2 className="text-3xl font-bold font-['Tajawal'] text-black mb-2">{t("contact.form.title")}</h2>
+              <div className="bg-card text-card-foreground p-8 rounded-xl border border-border shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
+                <h2 className="text-3xl font-bold font-['Tajawal'] text-foreground mb-2">{t("contact.form.title")}</h2>
                 <p className="text-[#8c8c8c] mb-8">{t("contact.form.desc")}</p>
 
                 {submitted ? (
@@ -204,14 +204,14 @@ export function Contact() {
                     <div className="w-16 h-16 rounded-full bg-[#525252]/20 flex items-center justify-center mx-auto mb-4">
                       <Send className="w-8 h-8 text-[#525252]" />
                     </div>
-                    <h3 className="text-xl font-bold text-black mb-2">{t("contact.form.success")}</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-2">{t("contact.form.success")}</h3>
                     <p className="text-[#8c8c8c]">{t("contact.form.successDesc")}</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-medium text-black mb-2">{t("contact.form.name")} *</label>
+                        <label className="block text-sm font-medium text-foreground mb-2">{t("contact.form.name")} *</label>
                         <input
                           type="text"
                           required
@@ -221,12 +221,12 @@ export function Contact() {
                           {...formFieldDirProps(
                             isRTL,
                             "text",
-                            "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black bg-white",
+                            "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground",
                           )}
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-black mb-2">{t("contact.form.email")} *</label>
+                        <label className="block text-sm font-medium text-foreground mb-2">{t("contact.form.email")} *</label>
                         <input
                           type="email"
                           required
@@ -236,7 +236,7 @@ export function Contact() {
                           {...formFieldDirProps(
                             isRTL,
                             "latin",
-                            "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black bg-white",
+                            "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground",
                           )}
                         />
                       </div>
@@ -244,7 +244,7 @@ export function Contact() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-medium text-black mb-2">{t("contact.form.phone")}</label>
+                        <label className="block text-sm font-medium text-foreground mb-2">{t("contact.form.phone")}</label>
                         <PhoneCountryField
                           country={getCountryByIso(phoneCountryIso) ?? COUNTRY_DIAL_CODES[0]}
                           onCountryChange={(iso) => {
@@ -261,7 +261,7 @@ export function Contact() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-black mb-2">{t("contact.form.subject")} *</label>
+                        <label className="block text-sm font-medium text-foreground mb-2">{t("contact.form.subject")} *</label>
                         <select
                           required
                           value={formData.subject}
@@ -269,7 +269,7 @@ export function Contact() {
                           {...formFieldDirProps(
                             isRTL,
                             "text",
-                            "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black bg-white",
+                            "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground",
                           )}
                         >
                           <option value="">{t("contact.form.selectSubject")}</option>
@@ -284,7 +284,7 @@ export function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-black mb-2">{t("contact.form.message")} *</label>
+                      <label className="block text-sm font-medium text-foreground mb-2">{t("contact.form.message")} *</label>
                       <textarea
                         required
                         rows={6}
@@ -294,7 +294,7 @@ export function Contact() {
                         {...formFieldDirProps(
                           isRTL,
                           "text",
-                          "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black bg-white resize-none",
+                          "w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground resize-none",
                         )}
                       ></textarea>
                     </div>
@@ -316,19 +316,19 @@ export function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background">
         <div className="max-w-[1200px] mx-auto px-6">
-          <h2 className="text-4xl font-bold font-['Tajawal'] text-black text-center mb-4">{t("contact.faq.title")}</h2>
+          <h2 className="text-4xl font-bold font-['Tajawal'] text-foreground text-center mb-4">{t("contact.faq.title")}</h2>
           <p className="text-center text-[#8c8c8c] mb-12 max-w-2xl mx-auto">
             {t("contact.faq.desc")}
           </p>
 
           <div className="max-w-3xl mx-auto space-y-4">
             {([1, 2, 3, 4] as const).map((n) => (
-              <details key={n} className="bg-white rounded-lg shadow-sm p-6 group">
-                <summary className="font-bold text-black cursor-pointer list-none flex justify-between items-center">
+              <details key={n} className="bg-card text-card-foreground rounded-lg border border-border p-6 group">
+                <summary className="font-bold text-foreground cursor-pointer list-none flex justify-between items-center">
                   {t(`contact.faq.q${n}`)}
-                  <span className="text-black group-open:rotate-45 transition-transform">+</span>
+                  <span className="text-foreground group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <p className="text-[#8c8c8c] mt-4">
                   {t(`contact.faq.a${n}`)}

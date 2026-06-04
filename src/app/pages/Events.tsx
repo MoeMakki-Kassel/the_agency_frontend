@@ -166,7 +166,7 @@ export function Events() {
   const fdField = formFieldDirProps(isRTL, "text");
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <section className="bg-hero-noir text-white py-14 sm:py-16 md:py-20">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6">
@@ -193,7 +193,7 @@ export function Events() {
               lang={language === "AR" ? "ar" : "en"}
               dir={fdField.dir}
               className={cn(
-                "md:col-span-2 border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-black/40 min-w-0",
+                "md:col-span-2 border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0",
                 fdField.className,
               )}
             />
@@ -204,7 +204,7 @@ export function Events() {
               aria-label={t("events.aria.timeFilter")}
               dir={fdField.dir}
               className={cn(
-                "border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-black/40 min-w-0 bg-white",
+                "border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0 bg-input text-foreground",
                 fdField.className,
               )}
             >
@@ -223,7 +223,7 @@ export function Events() {
               aria-label={t("events.aria.locationFilter")}
               dir={fdField.dir}
               className={cn(
-                "border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-black/40 min-w-0 bg-white",
+                "border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0 bg-input text-foreground",
                 fdField.className,
               )}
             >
@@ -240,7 +240,7 @@ export function Events() {
               aria-label={t("events.aria.sortBy")}
               dir={fdField.dir}
               className={cn(
-                "border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-black/40 min-w-0 bg-white",
+                "border border-[#e8e8e8] rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 min-w-0 bg-input text-foreground",
                 fdField.className,
               )}
             >
@@ -281,7 +281,7 @@ export function Events() {
                   return (
                     <div
                       key={event.id}
-                      className="group bg-white rounded-[12px] overflow-hidden shadow-[0_8px_24px_rgba(20,14,8,0.08)] transition-transform hover:-translate-y-1"
+                      className="group bg-card rounded-[12px] overflow-hidden border border-border shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-transform hover:-translate-y-1"
                     >
                       <div className="relative aspect-video overflow-hidden bg-[#e8e8e8]">
                         <img
@@ -291,7 +291,7 @@ export function Events() {
                         />
                       </div>
                       <div className="p-4 sm:p-5">
-                        <h3 className="text-lg sm:text-xl font-semibold text-black mb-1 line-clamp-1 text-start">
+                        <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-1 line-clamp-1 text-start">
                           {event.title}
                         </h3>
                         {event.subtitle && (
@@ -313,7 +313,7 @@ export function Events() {
                         </div>
 
                         <div className="flex flex-col gap-2 min-w-0">
-                          <span className="font-bold text-black text-sm sm:text-base tabular-nums text-start min-w-0">
+                          <span className="font-bold text-foreground text-sm sm:text-base tabular-nums text-start min-w-0">
                             {lowestPrice != null ? formatFromPrice(lowestPrice) : "—"}
                           </span>
                           <div className="flex gap-2 min-w-0">

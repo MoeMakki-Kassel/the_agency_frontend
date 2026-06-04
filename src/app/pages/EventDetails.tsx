@@ -320,7 +320,7 @@ export function EventDetails() {
     }
   }, [event?.slug, event?.subtitle, event?.title, id, t]);
   return (
-    <div className="bg-white min-h-screen text-black font-['Inter'] pb-20 lg:pb-0">
+    <div className="bg-background min-h-screen text-foreground font-['Inter'] pb-20 lg:pb-0">
       {/* 3.2.1 — Hero Banner */}
       <section className="relative h-[60vh] min-h-[500px] w-full overflow-hidden flex items-end pb-16">
         <div className="absolute inset-0">
@@ -355,21 +355,21 @@ export function EventDetails() {
               className="flex items-center gap-3 w-1/2 md:w-auto"
               aria-label={t("event.quickFacts.date")}
             >
-              <Calendar className="text-black" size={20} aria-hidden />
+              <Calendar className="text-foreground" size={20} aria-hidden />
               <span>{eventDateTimeLabel}</span>
             </div>
             <div
               className="flex items-center gap-3 w-1/2 md:w-auto"
               aria-label={t("event.quickFacts.venue")}
             >
-              <MapPin className="text-black" size={20} aria-hidden />
+              <MapPin className="text-foreground" size={20} aria-hidden />
               <span>{event?.location_name}</span>
             </div>
             <div
               className="flex items-center gap-3 w-1/3 md:w-auto"
               aria-label={t("event.quickFacts.price")}
             >
-              <Ticket className="text-black" size={20} aria-hidden />
+              <Ticket className="text-foreground" size={20} aria-hidden />
               <span>
                 {event?.tiers?.length
                   ? formatFromPrice(
@@ -379,14 +379,14 @@ export function EventDetails() {
               </span>
             </div>
             {/* <div className="flex items-center gap-3 w-1/3 md:w-auto">
-              <Clock className="text-black" size={20} />
+              <Clock className="text-foreground" size={20} />
               <span>{EVENT.duration}</span>
             </div> */}
             <div
               className="flex items-center gap-3 w-1/3 md:w-auto"
               aria-label={t("event.quickFacts.age")}
             >
-              <AlertCircle className="text-black" size={20} aria-hidden />
+              <AlertCircle className="text-foreground" size={20} aria-hidden />
               <span>{ageRestrictionLabel}</span>
             </div>
           </div>
@@ -404,7 +404,7 @@ export function EventDetails() {
             </h2>
             <div
               dir={descriptionDir}
-              className="prose prose-lg max-w-none text-black/80 whitespace-pre-wrap text-start [unicode-bidi:isolate] first-letter:text-5xl first-letter:font-bold first-letter:text-black first-letter:me-2 first-letter:float-start"
+              className="prose prose-lg max-w-none text-foreground/80 whitespace-pre-wrap text-start [unicode-bidi:isolate] first-letter:text-5xl first-letter:font-bold first-letter:text-foreground first-letter:me-2 first-letter:float-start"
             >
               {event?.description}
             </div>
@@ -415,7 +415,7 @@ export function EventDetails() {
               aria-label={t("event.sponsors.title")}
               className="rounded-2xl border border-[#e8e8e8] bg-gradient-to-br from-[#fafafa] to-white p-8 shadow-[0_8px_24px_rgba(20,14,8,0.04)]"
             >
-              <h2 className="text-2xl md:text-3xl font-bold font-['Tajawal'] mb-2 text-black">
+              <h2 className="text-2xl md:text-3xl font-bold font-['Tajawal'] mb-2 text-foreground">
                 {t("event.sponsors.title")}
               </h2>
               <p className="text-sm text-[#8c8c8c] mb-8 max-w-xl">
@@ -430,7 +430,7 @@ export function EventDetails() {
                   return (
                     <li
                       key={sid}
-                      className="flex flex-col items-center justify-center rounded-xl border border-[#eaeaea] bg-white px-4 py-6 md:py-8 min-h-[112px]"
+                      className="flex flex-col items-center justify-center rounded-xl border border-border bg-card px-4 py-6 md:py-8 min-h-[112px]"
                     >
                       {logo ? (
                         <img
@@ -439,7 +439,7 @@ export function EventDetails() {
                           className="max-h-14 md:max-h-16 w-full object-contain"
                         />
                       ) : (
-                        <span className="text-center font-semibold text-black text-sm md:text-base leading-snug px-1">
+                        <span className="text-center font-semibold text-foreground text-sm md:text-base leading-snug px-1">
                           {name}
                         </span>
                       )}
@@ -456,7 +456,7 @@ export function EventDetails() {
           )}
 
           {/* Event Contact */}
-          <section className="bg-white border border-[#e8e8e8] rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(20,14,8,0.04)]">
+          <section className="bg-card border border-border rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
             <div className="border-s-4 border-black p-8">
               <h3 className="text-xl font-bold font-['Tajawal'] mb-6">
                 {t("event.contact.title")}
@@ -464,9 +464,9 @@ export function EventDetails() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                 <a
                   href={`tel:${event?.contact_phone}`}
-                  className="flex items-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow group"
+                  className="flex items-center p-4 bg-card rounded-lg hover:shadow-md transition-shadow group"
                 >
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black group-hover:bg-black group-hover:text-white transition-colors me-4 shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors me-4 shrink-0">
                     <Phone size={20} />
                   </div>
                   <div className="min-w-0">
@@ -480,9 +480,9 @@ export function EventDetails() {
                 </a>
                 <a
                   href={`mailto:${event?.contact_email}`}
-                  className="flex items-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow group"
+                  className="flex items-center p-4 bg-card rounded-lg hover:shadow-md transition-shadow group"
                 >
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black group-hover:bg-black group-hover:text-white transition-colors me-4 shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors me-4 shrink-0">
                     <Mail size={20} />
                   </div>
                   <div className="min-w-0">
@@ -542,7 +542,7 @@ export function EventDetails() {
                 return (
                   <>
                     <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center mix-blend-multiply" />
-                    <div className="absolute inset-0 flex items-center justify-center text-black pointer-events-none">
+                    <div className="absolute inset-0 flex items-center justify-center text-foreground pointer-events-none">
                       <MapPin size={32} className="fill-current" />
                     </div>
                   </>
@@ -567,7 +567,7 @@ export function EventDetails() {
 
         {/* Right column (40%) — Sticky Booking Card */}
         <div className="w-full lg:w-2/5 relative" id="event-reserve">
-          <div className="sticky top-8 bg-white border border-[#8c8c8c] rounded-xl shadow-[0_12px_48px_rgba(20,14,8,0.1)] p-8">
+          <div className="sticky top-8 bg-card border border-border rounded-xl shadow-[0_12px_48px_rgba(0,0,0,0.5)] p-8">
             <h3 className="text-2xl font-bold font-['Tajawal'] mb-6">
               {t("event.booking.title")}
             </h3>
@@ -622,7 +622,7 @@ export function EventDetails() {
                 onClick={() => void shareEvent()}
                 disabled={!event?.slug && !id}
                 aria-label={t("event.share.aria")}
-                className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-[#e8e8e8] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                className="w-10 h-10 rounded-full bg-background text-foreground flex items-center justify-center hover:bg-[#e8e8e8] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <Share2 size={18} />
               </button>
@@ -632,7 +632,7 @@ export function EventDetails() {
       </div>
 
       {/* Floating Mobile Book Button */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[#e8e8e8] p-4 shadow-[0_-4px_12px_rgba(0,0,0,0.1)] z-40">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border p-4 shadow-[0_-4px_12px_rgba(0,0,0,0.1)] z-40">
         <div className="flex items-center justify-between gap-3">
           <div className="flex flex-col">
             <span className="text-xs text-[#8c8c8c]">

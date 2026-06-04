@@ -1071,7 +1071,7 @@ export function SvgVenueMapPicker({
       {activeTier && !useCompactChrome && (
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 rounded-xl border border-[#000000]/15 bg-[#f5f5f5] px-3 py-2.5">
           <div className="min-w-0">
-            <p className="text-sm font-semibold text-black truncate">
+            <p className="text-sm font-semibold text-foreground truncate">
               {interpolateTemplate(t('seats.viewingSection'), { name: tierLabel(activeTier) })}
             </p>
             <p className="text-[11px] text-[#525252] mt-0.5">{t('seats.sectionFocusHint')}</p>
@@ -1234,7 +1234,7 @@ export function SvgVenueMapPicker({
           >
             {activeTier && (
               <div className="flex items-center justify-between gap-2 px-2.5 pt-1.5 pb-0.5 scaled-laptop:pt-1 scaled-laptop:pb-0 cramped:pt-1 cramped:pb-0">
-                <p className="text-[11px] font-semibold text-black truncate min-w-0">
+                <p className="text-[11px] font-semibold text-foreground truncate min-w-0">
                   {interpolateTemplate(t('seats.viewingSection'), { name: tierLabel(activeTier) })}
                 </p>
                 <button
@@ -1308,7 +1308,7 @@ function ZoomButton({
       className={`flex items-center justify-center rounded-lg border touch-manipulation ${
         floating
           ? 'w-9 h-9 border-[#e8e8e8] bg-white/95 text-[#525252] shadow-sm'
-          : 'w-11 h-11 sm:w-9 sm:h-9 border-[#e8e8e8] bg-white text-[#525252] hover:bg-[#fafafa] hover:text-black'
+          : 'w-11 h-11 sm:w-9 sm:h-9 border-[#e8e8e8] bg-white text-[#525252] hover:bg-[#fafafa] hover:text-foreground'
       }`}
     >
       {children}

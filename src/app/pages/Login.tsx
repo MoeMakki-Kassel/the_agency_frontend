@@ -97,11 +97,11 @@ export function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-4">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-[0_8px_32px_rgba(20,14,8,0.05)] p-6 sm:p-8 border border-[#e8e8e8]">
+    <div className="min-h-screen bg-background flex items-center justify-center p-4">
+      <div className="w-full max-w-md bg-card text-card-foreground rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] p-6 sm:p-8 border border-border">
         <Link
           to="/"
-          className="inline-flex items-center text-[#8c8c8c] hover:text-black mb-6 transition-colors"
+          className="inline-flex items-center text-[#8c8c8c] hover:text-foreground mb-6 transition-colors"
         >
           <ArrowLeft size={16} className="me-2" />
           {t('login.backToSite')}
@@ -134,7 +134,7 @@ export function Login() {
                 {...formFieldDirProps(
                   isRTL,
                   'latin',
-                  'w-full ps-10 pe-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black bg-white disabled:opacity-60',
+                  'w-full ps-10 pe-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground disabled:opacity-60',
                 )}
                 placeholder="you@example.com"
               />
@@ -157,7 +157,7 @@ export function Login() {
                   isRTL,
                   'latin',
                   cn(
-                    'w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-black bg-white font-mono tracking-widest text-2xl',
+                    'w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-input text-foreground font-mono tracking-widest text-2xl',
                     !isRTL && 'text-center',
                   ),
                 )}

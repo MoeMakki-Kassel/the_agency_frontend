@@ -77,7 +77,7 @@ const VENUES = [
 
 export function Venues() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-hero-noir text-white py-24">
         <div className="max-w-[1200px] mx-auto px-6">
@@ -93,10 +93,10 @@ export function Venues() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {VENUES.map(venue => (
-              <div key={venue.id} className="bg-white rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(20,14,8,0.08)] hover:shadow-[0_12px_32px_rgba(20,14,8,0.12)] transition-shadow">
+              <div key={venue.id} className="bg-card text-card-foreground rounded-xl overflow-hidden border border-border shadow-[0_8px_24px_rgba(0,0,0,0.5)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.7)] transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <img src={venue.image} alt={venue.name} className="w-full h-full object-cover" />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-black">
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-foreground">
                     {venue.type}
                   </div>
                   {venue.upcomingEvents > 0 && (
@@ -108,7 +108,7 @@ export function Venues() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold font-['Tajawal'] text-black mb-2">{venue.name}</h3>
+                  <h3 className="text-2xl font-bold font-['Tajawal'] text-foreground mb-2">{venue.name}</h3>
                   <div className="flex items-center gap-2 text-[#8c8c8c] mb-4">
                     <MapPin className="w-4 h-4" />
                     <span className="text-sm">{venue.location}</span>
@@ -119,13 +119,13 @@ export function Venues() {
                   <p className="text-[#8c8c8c] mb-6">{venue.description}</p>
 
                   <div className="border-t border-[#e8e8e8] pt-4 space-y-2">
-                    <div className="flex items-center gap-2 text-sm text-black">
-                      <Phone className="w-4 h-4 text-black" />
-                      <a href={`tel:${venue.phone}`} className="hover:text-black transition-colors">{venue.phone}</a>
+                    <div className="flex items-center gap-2 text-sm text-foreground">
+                      <Phone className="w-4 h-4 text-foreground" />
+                      <a href={`tel:${venue.phone}`} className="hover:text-foreground transition-colors">{venue.phone}</a>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-black">
-                      <Mail className="w-4 h-4 text-black" />
-                      <a href={`mailto:${venue.email}`} className="hover:text-black transition-colors">{venue.email}</a>
+                    <div className="flex items-center gap-2 text-sm text-foreground">
+                      <Mail className="w-4 h-4 text-foreground" />
+                      <a href={`mailto:${venue.email}`} className="hover:text-foreground transition-colors">{venue.email}</a>
                     </div>
                   </div>
                 </div>
@@ -136,9 +136,9 @@ export function Venues() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background">
         <div className="max-w-[1200px] mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold font-['Tajawal'] text-black mb-6">Venue Partners</h2>
+          <h2 className="text-4xl font-bold font-['Tajawal'] text-foreground mb-6">Venue Partners</h2>
           <p className="text-lg text-[#8c8c8c] mb-8 max-w-2xl mx-auto">
             Are you a venue owner looking to host world-class events? Partner with TheAgencyJo to bring exceptional live music to your space.
           </p>

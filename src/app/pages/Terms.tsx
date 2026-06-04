@@ -7,7 +7,7 @@ export function Terms() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
       <section className="bg-hero-noir text-white py-16">
         <div className="max-w-[900px] mx-auto px-6">
@@ -25,7 +25,7 @@ export function Terms() {
           <div className="prose prose-lg max-w-none">
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.agreement.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.agreement.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.agreement.p1')}
               </p>
@@ -35,14 +35,14 @@ export function Terms() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.use.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.use.title')}</h2>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.use.eligibility.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.use.eligibility.title')}</h3>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.use.eligibility.desc')}
               </p>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.use.registration.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.use.registration.title')}</h3>
               <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2 mb-4">
                 <li>{t('terms.use.registration.item1')}</li>
                 <li>{t('terms.use.registration.item2')}</li>
@@ -50,7 +50,7 @@ export function Terms() {
                 <li>{t('terms.use.registration.item4')}</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.use.prohibited.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.use.prohibited.title')}</h3>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.use.prohibited.intro')}
               </p>
@@ -66,9 +66,9 @@ export function Terms() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.purchases.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.purchases.title')}</h2>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.purchases.process.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.purchases.process.title')}</h3>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.purchases.process.intro')}
               </p>
@@ -79,7 +79,7 @@ export function Terms() {
                 <li>{t('terms.purchases.process.item4')}</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.purchases.pricing.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.purchases.pricing.title')}</h3>
               <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2 mb-4">
                 <li>{t('terms.purchases.pricing.item1')}</li>
                 <li>{t('terms.purchases.pricing.item2')}</li>
@@ -88,16 +88,16 @@ export function Terms() {
                 <li>{t('terms.purchases.pricing.item5')}</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.purchases.limits.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.purchases.limits.title')}</h3>
               <p className="text-[#8c8c8c]">
                 {t('terms.purchases.limits.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.refunds.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.refunds.title')}</h2>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.refunds.cancellation.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.refunds.cancellation.title')}</h3>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.refunds.cancellation.intro')}
               </p>
@@ -107,21 +107,21 @@ export function Terms() {
                 <li>{t('terms.refunds.cancellation.item3')}</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.refunds.postponement.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.refunds.postponement.title')}</h3>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.refunds.postponement.desc')}
               </p>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.refunds.customer.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.refunds.customer.title')}</h3>
               <p className="text-[#8c8c8c]">
                 {t('terms.refunds.customer.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.access.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.access.title')}</h2>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.access.entry.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.access.entry.title')}</h3>
               <ul className="list-disc pl-6 text-[#8c8c8c] space-y-2 mb-4">
                 <li>{t('terms.access.entry.item1')}</li>
                 <li>{t('terms.access.entry.item2')}</li>
@@ -129,19 +129,19 @@ export function Terms() {
                 <li>{t('terms.access.entry.item4')}</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.access.prohibited.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.access.prohibited.title')}</h3>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.access.prohibited.desc')}
               </p>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.access.behavior.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.access.behavior.title')}</h3>
               <p className="text-[#8c8c8c]">
                 {t('terms.access.behavior.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.ip.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.ip.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.ip.p1')}
               </p>
@@ -151,7 +151,7 @@ export function Terms() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.liability.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.liability.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.liability.intro')}
               </p>
@@ -165,28 +165,28 @@ export function Terms() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.indemnification.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.indemnification.title')}</h2>
               <p className="text-[#8c8c8c]">
                 {t('terms.indemnification.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.privacy.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.privacy.title')}</h2>
               <p className="text-[#8c8c8c]">
                 {t('terms.privacy.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.disputes.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.disputes.title')}</h2>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.disputes.law.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.disputes.law.title')}</h3>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.disputes.law.desc')}
               </p>
 
-              <h3 className="text-xl font-semibold text-black mb-3 mt-6">{t('terms.disputes.process.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">{t('terms.disputes.process.title')}</h3>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.disputes.process.intro')}
               </p>
@@ -198,40 +198,40 @@ export function Terms() {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.changes.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.changes.title')}</h2>
               <p className="text-[#8c8c8c]">
                 {t('terms.changes.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.termination.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.termination.title')}</h2>
               <p className="text-[#8c8c8c]">
                 {t('terms.termination.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.severability.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.severability.title')}</h2>
               <p className="text-[#8c8c8c]">
                 {t('terms.severability.desc')}
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-4">{t('terms.contact.title')}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{t('terms.contact.title')}</h2>
               <p className="text-[#8c8c8c] mb-4">
                 {t('terms.contact.intro')}
               </p>
               <div className="bg-[#e8e8e8] p-6 rounded-lg">
-                <p className="text-black mb-2"><strong>{t('terms.contact.email')}</strong> {t('terms.contact.emailValue')}</p>
-                <p className="text-black mb-2">
+                <p className="text-foreground mb-2"><strong>{t('terms.contact.email')}</strong> {t('terms.contact.emailValue')}</p>
+                <p className="text-foreground mb-2">
                   <strong>{t('terms.contact.phone')}</strong>{' '}
                   <span dir="ltr" className="inline-block [unicode-bidi:isolate] tabular-nums">
                     {t('terms.contact.phoneValue')}
                   </span>
                 </p>
-                <p className="text-black"><strong>{t('terms.contact.address')}</strong> {t('terms.contact.addressValue')}</p>
+                <p className="text-foreground"><strong>{t('terms.contact.address')}</strong> {t('terms.contact.addressValue')}</p>
               </div>
             </div>
 

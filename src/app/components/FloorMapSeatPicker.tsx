@@ -456,7 +456,7 @@ export function FloorMapSeatPicker({
           }`}
         >
           <div className="min-w-0">
-            <span className="text-sm sm:text-base font-semibold text-black block">
+            <span className="text-sm sm:text-base font-semibold text-foreground block">
               {totalSelected} {ticketCountLabel}
             </span>
             {totalSelected === 0 && !compactSummary ? (

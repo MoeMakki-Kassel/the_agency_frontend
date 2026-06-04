@@ -625,7 +625,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                 </button>
               )}
               <div className="min-w-0">
-              <h3 className="font-bold text-base sm:text-xl text-black truncate scaled-laptop:text-base cramped:text-sm">{event.title}</h3>
+              <h3 className="font-bold text-base sm:text-xl text-foreground truncate scaled-laptop:text-base cramped:text-sm">{event.title}</h3>
               <p className="text-xs sm:text-sm text-[#8c8c8c] short:hidden">{t('booking.title')}</p>
               </div>
             </div>
@@ -653,7 +653,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                     step === s
                       ? 'bg-primary text-primary-foreground'
                       : stepIndex > i
-                        ? 'bg-[#e8e8e8] text-black'
+                        ? 'bg-[#e8e8e8] text-foreground'
                         : 'bg-white border border-[#e8e8e8] text-[#8c8c8c]',
                   )}
                 >
@@ -743,7 +743,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                         {...formFieldDirProps(
                           isRTL,
                           'latin',
-                          'w-full ps-10 pe-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50',
+                          'w-full ps-10 pe-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50',
                         )}
                         placeholder={t('login.emailPlaceholder')}
                       />
@@ -769,7 +769,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                     setInfo(null);
                     setPostVerifyNeedsDetails(false);
                   }}
-                  className="ms-2 font-medium text-black hover:underline"
+                  className="ms-2 font-medium text-foreground hover:underline"
                 >
                   {authMode === 'signup' ? t('nav.signIn') : t('booking.createAccount')}
                 </button>
@@ -831,7 +831,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                       isRTL,
                       'latin',
                       cn(
-                        'w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-black/50 font-mono tracking-widest text-2xl',
+                        'w-full px-4 py-3 rounded-lg border border-[#e8e8e8] focus:outline-none focus:ring-2 focus:ring-primary/50 font-mono tracking-widest text-2xl',
                         !isRTL && 'text-center',
                       ),
                     )}
@@ -848,7 +848,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                   type="button"
                   onClick={() => void handleResendCode()}
                   disabled={loading || resendSeconds > 0}
-                  className="w-full py-2 text-sm font-medium text-[#525252] hover:text-black disabled:opacity-50"
+                  className="w-full py-2 text-sm font-medium text-[#525252] hover:text-foreground disabled:opacity-50"
                 >
                   {resendSeconds > 0
                     ? t('booking.resendCooldown').replace('{seconds}', String(resendSeconds))
