@@ -12,7 +12,7 @@ export function About() {
   }, []);
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section  test*/}
+      {/* Hero Section  test1*/}
       <section className="bg-hero-noir text-white py-24">
         <div className="max-w-[1200px] mx-auto px-6">
           <button
