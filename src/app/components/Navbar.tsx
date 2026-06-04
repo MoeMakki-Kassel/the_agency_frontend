@@ -53,7 +53,7 @@ export function Navbar() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between">
         {/* Left */}
         <Link to="/" className="flex items-center gap-2">
-          <SiteLogo variant="onDark" className="cursor-pointer hover:opacity-80 transition-opacity" />
+          <SiteLogo variant="onDark" className="h-12 lg:h-14 cursor-pointer hover:opacity-80 transition-opacity" />
         </Link>
 
         {/* Center */}

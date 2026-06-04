@@ -62,7 +62,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 lg:gap-x-16">
           {/* Logo & Tagline */}
           <div className="lg:col-span-2">
-            <SiteLogo variant="onDark" className="mb-6" />
+            <SiteLogo variant="onDark" className="h-12 sm:h-14 mb-6" />
             <p className="text-muted-foreground max-w-sm text-[16px] leading-[24px]">
               {t("footer.title")}{" "}
             </p>

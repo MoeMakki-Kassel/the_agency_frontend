@@ -63,7 +63,7 @@ export function Landing() {
           <Link to="/" aria-label="Home" className="mb-5 sm:mb-10 md:mb-12">
             <SiteLogo
               variant="onDark"
-              className="h-10 sm:h-16 md:h-20 w-auto mx-auto cursor-pointer hover:opacity-90 transition-opacity"
+              className="h-20 sm:h-28 md:h-36 lg:h-44 w-auto mx-auto cursor-pointer hover:opacity-90 transition-opacity drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
             />
           </Link>
 

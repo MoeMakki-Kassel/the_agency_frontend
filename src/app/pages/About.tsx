@@ -1,5 +1,4 @@
 import { Star, Music, Users, Globe, ArrowLeft } from "lucide-react";
-import artistPhoto from "../../imports/photo-1.png";
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -46,7 +45,7 @@ export function About() {
             </div>
             <div className="relative">
               <img
-                src={artistPhoto}
+                src="/audience.jpg"
                 alt="Live performance"
                 className="w-full h-[500px] object-cover rounded-xl shadow-2xl"
               />
@@ -105,38 +104,6 @@ export function About() {
               <p className="text-muted-foreground">
                 {t("about.values.accessibility.desc")}
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-24 bg-hero-noir text-white">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-bold font-['Space_Grotesk'] text-white mb-2">
-                500+
-              </div>
-              <p className="text-white/70">{t("about.stats.events")} </p>
-            </div>
-            <div>
-              <div className="text-5xl font-bold font-['Space_Grotesk'] text-white mb-2">
-                50K+
-              </div>
-              <p className="text-white/70">{t("about.stats.tickets")} </p>
-            </div>
-            <div>
-              <div className="text-5xl font-bold font-['Space_Grotesk'] text-white mb-2">
-                200+
-              </div>
-              <p className="text-white/70">{t("about.stats.artists")} </p>
-            </div>
-            <div>
-              <div className="text-5xl font-bold font-['Space_Grotesk'] text-white mb-2">
-                8
-              </div>
-              <p className="text-white/70">{t("about.stats.countries")} </p>
             </div>
           </div>
         </div>

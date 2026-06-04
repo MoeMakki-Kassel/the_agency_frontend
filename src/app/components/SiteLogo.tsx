@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import fallbackLogo from "../../imports/logo_theagencyjo.png";
+import { cn } from "./ui/utils";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -43,7 +44,16 @@ export function SiteLogo({ variant = "default", className = "", alt = "TheAgency
     <img
       src={src}
       alt={alt}
-      className={`h-8 w-auto object-contain ${invertFallback ? "brightness-0 invert" : ""} ${className}`.trim()}
+      // Preload hint so the logo renders ASAP on the first paint
+      loading="eager"
+      decoding="async"
+      // cn() runs the resulting classes through tailwind-merge so a height in
+      // `className` overrides the default `h-10` instead of fighting it.
+      className={cn(
+        "h-10 w-auto object-contain",
+        invertFallback && "brightness-0 invert",
+        className,
+      )}
     />
   );
 }
