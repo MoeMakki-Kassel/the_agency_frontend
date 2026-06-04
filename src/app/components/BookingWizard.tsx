@@ -609,8 +609,8 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
 
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 scaled-laptop:p-0 cramped:p-0">
-      <div className="bg-white rounded-t-3xl sm:rounded-2xl w-full sm:max-w-4xl h-[min(95dvh,100dvh)] sm:h-[min(90dvh,960px)] scaled-laptop:h-[min(98dvh,100dvh)] scaled-laptop:max-h-[100dvh] scaled-laptop:rounded-none cramped:h-[100dvh] cramped:max-h-[100dvh] cramped:rounded-none overflow-hidden flex flex-col shadow-2xl">
-        <div className="p-4 sm:p-6 short:p-3 scaled-laptop:p-2.5 cramped:p-2 border-b border-[#e8e8e8] bg-white shrink-0">
+      <div className="bg-card text-card-foreground rounded-t-3xl sm:rounded-2xl w-full sm:max-w-4xl h-[min(95dvh,100dvh)] sm:h-[min(90dvh,960px)] scaled-laptop:h-[min(98dvh,100dvh)] scaled-laptop:max-h-[100dvh] scaled-laptop:rounded-none cramped:h-[100dvh] cramped:max-h-[100dvh] cramped:rounded-none overflow-hidden flex flex-col shadow-2xl">
+        <div className="p-4 sm:p-6 short:p-3 scaled-laptop:p-2.5 cramped:p-2 border-b border-border bg-card shrink-0">
           <div className="flex justify-between items-start mb-4 short:mb-2 scaled-laptop:mb-2 cramped:mb-1.5 gap-2">
             <div className="flex items-start gap-1 min-w-0 flex-1">
               {step !== 'seats' && (
@@ -654,7 +654,7 @@ export function BookingWizard({ event, onClose }: BookingWizardProps) {
                       ? 'bg-primary text-primary-foreground'
                       : stepIndex > i
                         ? 'bg-[#e8e8e8] text-foreground'
-                        : 'bg-white border border-[#e8e8e8] text-[#8c8c8c]',
+                        : 'bg-card border border-border text-muted-foreground',
                   )}
                 >
                   {stepLabel(s)}

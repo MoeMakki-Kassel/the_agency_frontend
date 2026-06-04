@@ -19,7 +19,7 @@ import PaymentResult from "./pages/PaymentResult";
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { session, loading } = useAuth();
   
-  if (loading) return <div className="h-screen w-full flex items-center justify-center bg-white">Loading...</div>;
+  if (loading) return <div className="h-screen w-full flex items-center justify-center bg-background text-foreground">Loading...</div>;
   if (!session) return <Navigate to="/login" replace />;
   
   return <>{children}</>;

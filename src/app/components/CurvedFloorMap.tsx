@@ -230,7 +230,7 @@ export function FloorMapLegend({
             return (
               <div
                 key={tier.id}
-                className={'inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 bg-white ' + c.border}
+                className={'inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 bg-card text-card-foreground ' + c.border}
               >
                 <span className={'w-4 h-4 rounded-full ' + c.bg} />
                 <span className="text-xs font-medium">

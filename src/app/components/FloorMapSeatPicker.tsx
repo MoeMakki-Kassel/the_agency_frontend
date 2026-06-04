@@ -593,7 +593,7 @@ export function FloorMapSeatPicker({
 
       {gaTiers.length > 0 &&
         (conserveVerticalSpace ? (
-          <details className="shrink-0 mx-4 sm:mx-0 border border-[#e8e8e8] rounded-xl bg-white group">
+          <details className="shrink-0 mx-4 sm:mx-0 border border-border rounded-xl bg-card text-card-foreground group">
             <summary className="cursor-pointer list-none px-3 py-2.5 text-sm font-medium touch-manipulation [&::-webkit-details-marker]:hidden">
               {t('tier.regularStanding')}
               <span className="float-end text-[#8c8c8c] text-xs font-normal group-open:hidden">
@@ -632,7 +632,7 @@ export function FloorMapSeatPicker({
             </div>
           </details>
         ) : (
-          <div className="shrink-0 space-y-3 mx-4 sm:mx-0 p-4 bg-white border border-[#e8e8e8] rounded-xl">
+          <div className="shrink-0 space-y-3 mx-4 sm:mx-0 p-4 bg-card text-card-foreground border border-border rounded-xl">
             <p className="text-sm font-medium">{t('tier.regularStanding')}</p>
             {gaTiers.map((gt) => (
               <div key={gt.id} className="flex items-center justify-between gap-4">

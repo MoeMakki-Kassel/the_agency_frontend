@@ -1061,7 +1061,7 @@ export function SvgVenueMapPicker({
           <button
             type="button"
             onClick={resetView}
-            className="px-3 py-2 text-xs font-medium text-[#525252] border border-[#e8e8e8] rounded-lg hover:bg-white touch-manipulation min-h-11 sm:min-h-0"
+            className="px-3 py-2 text-xs font-medium text-[#525252] border border-[#e8e8e8] rounded-lg hover:bg-muted touch-manipulation min-h-11 sm:min-h-0"
           >
             {t('seats.resetView')}
           </button>
@@ -1280,7 +1280,7 @@ export function TierFilterChip({
       } ${
         active
           ? 'bg-primary text-primary-foreground border-primary scale-[1.02]'
-          : 'bg-white text-[#525252] border-[#e8e8e8] hover:border-[#525252]'
+          : 'bg-card text-foreground border-border hover:border-primary'
       }`}
       style={!active && color ? { borderLeftWidth: 3, borderLeftColor: color } : undefined}
     >
@@ -1308,7 +1308,7 @@ function ZoomButton({
       className={`flex items-center justify-center rounded-lg border touch-manipulation ${
         floating
           ? 'w-9 h-9 border-[#e8e8e8] bg-white/95 text-[#525252] shadow-sm'
-          : 'w-11 h-11 sm:w-9 sm:h-9 border-[#e8e8e8] bg-white text-[#525252] hover:bg-[#fafafa] hover:text-foreground'
+          : 'w-11 h-11 sm:w-9 sm:h-9 border-border bg-card text-foreground hover:bg-muted'
       }`}
     >
       {children}
