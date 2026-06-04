@@ -429,7 +429,7 @@ const translations = {
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
     "footer.allRights": "All rights reserved.",
-    "footer.poweredByPrefix": "Powered by the collaboration of",
+    "footer.poweredByPrefix": "Powered by",
     "footer.poweredByAnd": "and",
     "footer.title":
       "              Live the night. Book the moment. The premium platform for curated live music events across the MENA region and beyond.",
